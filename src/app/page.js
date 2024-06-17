@@ -3,6 +3,11 @@ export default function Home() {
     <>
       <div className="flex flex-col text-center align-center justify-center">
         <div className="m-8">
+          <h1 className="text-3xl font-bold">Bolão do Mineiro</h1>
+          <h3>Site principal para todos visitantes</h3>
+        </div>
+
+        <div className="m-8">
           <div className="p-16 border border-black">Navegação</div>
         </div>
 
