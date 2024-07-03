@@ -1,38 +1,19 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col text-center align-center justify-center">
-        <div className="m-8">
+      <div className="flex flex-col items-center justify-center text-center h-screen">
+        <Image
+          src="/logotipo.png"
+          alt="Bolão do Mineiro"
+          width={200}
+          height={300}
+          className="mx-auto"
+        />
+        <div className="m-8 text-center">
           <h1 className="text-3xl font-bold">Bolão do Mineiro</h1>
-          <h3>Site principal para todos visitantes</h3>
-        </div>
-
-        <div className="m-8">
-          <div className="p-16 border border-black">Navegação</div>
-        </div>
-
-        <div className="m-8">
-          <div className="p-16 border border-black">Slider</div>
-        </div>
-
-        <div className="m-8">
-          <div className="p-16 border border-black">Apostas disponíveis</div>
-        </div>
-
-        <div className="m-8">
-          <div className="p-16 border border-black">Nossos números</div>
-        </div>
-
-        <div className="m-8">
-          <div className="p-16 border border-black">Como jogar?</div>
-        </div>
-
-        <div className="m-8">
-          <div className="p-16 border border-black">Depoimentos</div>
-        </div>
-
-        <div className="m-8">
-          <div className="p-16 border border-black">Rodapé</div>
+          <h3>Diversão e emoção andam juntas!</h3>
         </div>
       </div>
     </>
