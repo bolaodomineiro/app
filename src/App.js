@@ -7,6 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <br />
+        <br />
         <p>Bolão do Mineiro</p>
         <p>Onde a diversão é garantida!</p>
       </header>
