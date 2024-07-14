@@ -5,6 +5,8 @@ import { HeaderContainer } from './HeaderStyles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faCartShopping} from '@fortawesome/free-solid-svg-icons';
 
+import Menu from '../navigation/Menu';
+
 
 const Header = () => {
     return (
@@ -31,7 +33,7 @@ const Header = () => {
                 </div>
            
             <section className='header_footer_area'>
-
+                <Menu />
             </section>
         </HeaderContainer>
     );

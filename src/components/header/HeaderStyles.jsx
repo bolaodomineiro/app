@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
     width: 100%;
+    background-color: #fff;
    
     .reader_top_area {
         display: flex;
@@ -12,7 +13,7 @@ export const HeaderContainer = styled.header`
 
         a{
             color: #000;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: bold;
             padding: 0px 20px;
             border-left: 1px solid #AB0519;
@@ -93,7 +94,8 @@ export const HeaderContainer = styled.header`
 
     .header_footer_area {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
+        padding: 0px 35px;
         width: 100%;
         height: 40px;
         background-color: #F3EED9;
