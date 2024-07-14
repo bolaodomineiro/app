@@ -49,6 +49,7 @@ export const MenuContainer = styled.nav`
         height: 0;
         width: 150px;
         trasition: all 0.5s ease;
+        z-index: 99;
 
        
         li {
