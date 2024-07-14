@@ -1,12 +1,11 @@
+import React from "react";
 import "./index.css";
-import Logo from "../src/assets/images/logotipo.png";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
     <>
-      <img src={Logo} className="App-logo" alt="logo" />
-      <p>Bolão do Mineiro</p>
-      <p>Onde a diversão acontece!</p>
+      <Home />
     </>
   );
 }
