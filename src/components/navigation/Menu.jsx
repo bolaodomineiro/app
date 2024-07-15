@@ -3,10 +3,10 @@ import {MenuContainer } from "./MenuStyles";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
-const Menu = () => {
+const Menu = ({ toggleMenu }) => {
     return (
         <MenuContainer >
-            <ul>
+            <ul style={{ right: toggleMenu ? "-300px" : "0" }} >
                 <li>Quina</li>
                 <li>Mega-Sena</li>
                 <li>

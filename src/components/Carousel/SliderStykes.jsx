@@ -4,6 +4,10 @@ export const SliderShow = styled.section`
     width: 100%;
     padding: 0px 35px;
 
+    @media (max-width: 420px) {
+        padding: 0px 0px;
+    }
+
    .swiper {
         width: 100%;
         height: 380px;

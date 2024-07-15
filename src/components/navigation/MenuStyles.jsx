@@ -4,6 +4,7 @@ export const MenuContainer = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   
 
     ul {
@@ -25,12 +26,12 @@ export const MenuContainer = styled.nav`
         height: 100%;
         position: relative;
         text-align: left;
-       
     }
 
     li:nth-child(6) {
         background-color: #AB0519;
         color: #fff;
+       
     }
 
 
@@ -60,6 +61,7 @@ export const MenuContainer = styled.nav`
             border-bottom: 1px solid transparent;
             font-weight: 500;
             width: 100%;
+            
         }
 
         li:hover {
@@ -73,6 +75,36 @@ export const MenuContainer = styled.nav`
         display: block;
         height: auto;
     }
+
+
+    @media (max-width: 800px) {
+         
+        ul{
+            height: calc(100vh - 120px);
+            flex-direction: column;
+            z-index: 99;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background-color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        li {
+            height: 40px;;
+            width: 100%;
+            justify-content: start;
+          
+        }
+            
+        li:nth-child(6) {
+            justify-content: center;
+        
+        }
+
+    }
+
+  
 
 `
 

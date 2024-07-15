@@ -1,39 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from '../../assets/images/logotipo.png';
-import { HeaderContainer } from './HeaderStyles';
+import { HeaderContainer,Search_area } from './HeaderStyles';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faCartShopping} from '@fortawesome/free-solid-svg-icons';
-
+import { faMagnifyingGlass, faCartShopping, faBars, faSquareXmark} from '@fortawesome/free-solid-svg-icons';
 import Menu from '../navigation/Menu';
 
 
 const Header = () => {
+
+    const [menu, setMenu] = React.useState(true);
+
     return (
         <HeaderContainer>
-            
-                <div className='reader_top_area'>
-                    <img className='logo' src={Logo} alt="logo" />
-                    <div className='reader_top_area_right'>
-                        <div>
+            <div className='reader_top_area'>
+                <img className='logo' src={Logo} alt="logo" />
+                <div className='reader_top_area_right'>
+                  
+                        <Search_area>
                             <FontAwesomeIcon className='search_icone' icon={faMagnifyingGlass} />
-                        </div>
+                        </Search_area>
                         <div>
                             <a href="#">Acessar conta</a>
                             <a href="#">Registrar</a>
                         </div>
-                        <div className='cart_area'>
-                            <FontAwesomeIcon className='cart_icone' icon={faCartShopping} />
-                            <div >
-                                <p>Saldo: R$ 0,00</p>
-                                <button>Adicionar saldo</button>
-                            </div>
+                  
+                    <div className='cart_area'>
+                        <FontAwesomeIcon className='cart_icone' icon={faCartShopping} />
+                        <div >
+                            <p>Saldo: R$ 0,00</p>
+                            <button>Adicionar saldo</button>
                         </div>
                     </div>
                 </div>
-           
-            <section className='header_footer_area'>
-                <Menu />
+            </div>
+            <section 
+                className='header_footer_area'
+            >
+                <Menu toggleMenu={menu} />
+
+                {   
+                    menu ? <FontAwesomeIcon 
+                        className='menu_icone' 
+                        icon={faBars} 
+                        onClick={() => setMenu(!menu)}
+                    /> :
+                    <FontAwesomeIcon 
+                        className='menu_icone' 
+                        icon={faSquareXmark} 
+                        onClick={() => setMenu(!menu)}
+                    />
+                }
+                
             </section>
         </HeaderContainer>
     );
