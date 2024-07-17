@@ -4,7 +4,7 @@ export const MenuContainer = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+  
   
 
     ul {
@@ -50,7 +50,7 @@ export const MenuContainer = styled.nav`
         height: 0;
         width: 150px;
         trasition: all 0.5s ease;
-        z-index: 99;
+        z-index: 111;
 
        
         li {

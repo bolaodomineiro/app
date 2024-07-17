@@ -13,21 +13,22 @@ const Header = () => {
 
     return (
         <HeaderContainer>
-            <div className='reader_top_area'>
+            <div className='header_top_area'>
                 <img className='logo' src={Logo} alt="logo" />
-                <div className='reader_top_area_right'>
+                <div className='header_top_area_right'>
                   
-                        <Search_area>
-                            <FontAwesomeIcon className='search_icone' icon={faMagnifyingGlass} />
-                        </Search_area>
-                        <div>
-                            <a href="#">Acessar conta</a>
-                            <a href="#">Registrar</a>
-                        </div>
+                    <Search_area>
+                        <input type="text" placeholder="Buscar aposta"/>
+                        <FontAwesomeIcon className='search_icone' icon={faMagnifyingGlass} />
+                    </Search_area>
+                    <div>
+                        <a href="#">Acessar conta</a>
+                        <a href="#">Registrar</a>
+                    </div>
                   
                     <div className='cart_area'>
                         <FontAwesomeIcon className='cart_icone' icon={faCartShopping} />
-                        <div >
+                        <div className='cart_info' >
                             <p>Saldo: R$ 0,00</p>
                             <button>Adicionar saldo</button>
                         </div>

@@ -5,8 +5,9 @@ export const HeaderContainer = styled.header`
     width: 100%;
     background-color: #fff;    
    
-    .reader_top_area {
+    .header_top_area {
         display: flex;
+        height: 80px;
         width: 100%;
         justify-content: flex-end;
         padding: 0px 35px;
@@ -17,6 +18,9 @@ export const HeaderContainer = styled.header`
         }
 
         a{
+            display: flex;
+            height: 35px;
+            align-items: center;
             color: #000;
             font-size: 0.9rem;
             font-weight: bold;
@@ -24,16 +28,17 @@ export const HeaderContainer = styled.header`
             border-left: 1px solid #AB0519;
             border-right: 1px solid #AB0519;
 
-            @media (max-width: 420px) {
+            @media (max-width: 620px) {
                 padding: 0px 14px;
-                font-size: 0.7rem;
-                margin-bottom: 5px;
             }
+
 
         }
         
-        a:nth-child(1) {
-            border-right: none;}
+        a:nth-child(2) {
+            padding-right: 0px;
+            border: none;
+
         }
 
         .logo {
@@ -44,51 +49,48 @@ export const HeaderContainer = styled.header`
             left: 35px;
             z-index: 3;
 
+
             @media (max-width: 420px) {
                 left: 10px;
             }
         }   
     }
 
-    .reader_top_area_right {
+    .header_top_area_right {
         display: flex;
         align-items: center;
+        gap: 20px;
 
-        @media (max-width: 800px) {
-            flex-direction: column-reverse;
+        @media (max-width: 580px) {
+            // flex-direction: column-reverse;
+            // align-items: flex-end;
         }
     }
 
-    .reader_top_area_right  div{
-        height: 80px;
+    .header_top_area_right  div{
         display: flex;
         align-items: center;
 
         @media (max-width: 800px) {
-            height: auto;
-            padding: 3px 0px;
+            padding: 2px 0px;
         }
             
-           
     }
 
-     .reader_top_area_right div:nth-child(3) div {
+     .header_top_area_right .cart_area .cart_info {
+    
         flex-direction: column;
         justify-content: center;
-     }
-
-    .search_icone {
-        margin-right: 20px;
-        width: 30px;
-        height: 30px;
-        color: #AB0519;
-        cursor: pointer;
+        height: 80px;
 
         @media (max-width: 800px) {
-            width: 25px;
-            height: 25px;
+              height: 75px;
         }
-    }
+            
+        @media (max-width: 580px) {
+            height:auto;
+        }
+     }
     
     .cart_icone {
         margin-right: 20px;
@@ -98,9 +100,9 @@ export const HeaderContainer = styled.header`
         color: #AB0519;
     }
 
-    .cart_area {
-        display: flex;
-      
+    .header_top_area_right .cart_area {
+        display: none;
+
         p {
             font-size: 14px;
             font-weight: 400;
@@ -159,16 +161,59 @@ export const HeaderContainer = styled.header`
        
 `
 export const Search_area = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 175px;
+    height: 35px;
+    border-radius: 30px;
+    border: 1px solid #AB0519;
+    position: relative;
 
-    @media (max-width: 800px) {
-        display: flex;
-        align-items: center;
+    .search_icone {
+        width: 20px;
+        height: 20px;
+        color: #AB0519;
+        cursor: pointer;
         position: absolute;
-        height: 35px;
-        top: 85px;
-        right: 70px;
+        right: 10px;
+        z-index: 1;
+
+        @media (max-width: 800px) {
+            width: 25px;
+            height: 25px;
+            margin-right: 0px;
+        }
+    }
+
+    input {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding-left: 10px;
         z-index: 2;
-    
+        cursor: pointer;
+        font-size: 0.7rem;
+        color: #B7B7B7;
+    }
+
+    @media (max-width: 570px) {
+        justify-content: flex-end;
+        position: absolute;
+        top: 83px;
+        right: 75px;
+        z-index: 2;
+    }
+
+    @media (max-width: 420px) {
+      right: 45px;
+    }
+
+    @media (max-width: 360px) {
+      width: 150px;
     }
 
   

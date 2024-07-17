@@ -4,7 +4,7 @@ export const SliderShow = styled.section`
     width: 100%;
     padding: 0px 35px;
 
-    @media (max-width: 420px) {
+    @media (max-width: 600px) {
         padding: 0px 0px;
     }
 
@@ -75,8 +75,13 @@ export const BenefitsOverview = styled.section`
         position: relative;
         top: -10px;
         z-index: 3;
+
         div:not(:first-child) {
             border-left: 1px solid #fff;
         }
+    }
+
+    @media (max-width: 510px) {
+        height: 70px;
     }
 `

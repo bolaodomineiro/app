@@ -4,7 +4,7 @@ import Slider from '../../components/Carousel/Slider';
 
 const Home = () => {
     return (
-        <section style={{ overflow: "hidden" }}>
+        <section style={{ overflowX: "hidden", height:"100svh" }}>
             <Header />
             <Slider />
         </section>
