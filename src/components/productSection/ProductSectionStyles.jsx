@@ -26,6 +26,14 @@ export const ProductSectionContainer = styled.section`
     .productSection {
         display: flex;
         justify-content: center;
-        gap : 20px;
+      
+        .productCards {
+            display: flex;
+            width: 960px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
     }
 `

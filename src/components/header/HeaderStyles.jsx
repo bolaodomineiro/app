@@ -32,8 +32,10 @@ export const HeaderContainer = styled.header`
                 color: #AB0519;
             }
 
-            @media (max-width: 620px) {
-                padding: 0px 14px;
+            @media (max-width: 560px) {
+                padding: 0px 10px;
+                flex-direction: column;
+                text-align: center;
             }
 
 
@@ -54,7 +56,7 @@ export const HeaderContainer = styled.header`
             z-index: 3;
 
 
-            @media (max-width: 420px) {
+            @media (max-width: 480px) {
                 left: 10px;
             }
         }   
@@ -65,9 +67,8 @@ export const HeaderContainer = styled.header`
         align-items: center;
         gap: 20px;
 
-        @media (max-width: 580px) {
-            // flex-direction: column-reverse;
-            // align-items: flex-end;
+        @media (max-width: 560px) {
+            gap: 0px;
         }
     }
 
@@ -102,11 +103,16 @@ export const HeaderContainer = styled.header`
         width: 45px;
         height: 40px;
         color: #AB0519;
+
+        @media (max-width: 470px) {
+            margin-right: 10px;
+            margin-left: 10px;
+          
+        }
     }
 
     .header_top_area_right .cart_area {
-        display: none;
-
+        
         p {
             font-size: 14px;
             font-weight: 400;
@@ -114,20 +120,6 @@ export const HeaderContainer = styled.header`
             margin-bottom: 2px;
         }
        
-        // button {
-        //     display: flex;
-        //     justify-content: center;
-        //     align-items: center;
-        //     background-color: #AB0519;
-        //     color: #fff;
-        //     border: none;
-        //     width: 110px;
-        //     height: 25px;
-        //     border-radius: 10px;
-        //     font-weight: bold;
-        //     font-size: 12px;
-        //     cursor: pointer;
-        // }
     }
 
     .header_footer_area {
@@ -204,7 +196,7 @@ export const Search_area = styled.div`
         color: #B7B7B7;
     }
 
-    @media (max-width: 570px) {
+    @media (max-width: 760px) {
         justify-content: flex-end;
         position: absolute;
         top: 83px;

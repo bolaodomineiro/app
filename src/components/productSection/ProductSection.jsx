@@ -28,6 +28,27 @@ const data = [
         description: "3 Jogos de 18 dezenas",
         count: 16,
         price: 30
+    },
+    {
+        image: Box01,
+        title: "BOLÃO MEGA SENA",
+        description: "Jogo de 12 dezenas + Jogo de 13 dezenas",
+        count: 16,
+        price: 30
+    },
+    {
+        image: Box02,
+        title: "BOLÃO LOTOFÁCIL",
+        description: "1 Jogo de 18 dezenas",
+        count: 16,
+        price: 30 
+    },
+    {
+        image: Box03,
+        title: "BOLÃO DA QUINA",
+        description: "3 Jogos de 18 dezenas",
+        count: 16,
+        price: 30
     }
 ];
 
@@ -41,20 +62,20 @@ const ProductSection = () => {
                 />
             </div>
             <section className="productSection">
-                
-                {
-                    data.map((item, index) => (
-                        <ProductCard
-                            key={index}
-                            image={item.image}
-                            title={item.title}
-                            description={item.description}
-                            count={item.count}
-                            price={item.price}
-                        />
-                    ))
-                }
-
+                <div className="productCards">
+                    {
+                        data.map((item, index) => (
+                            <ProductCard
+                                key={index}
+                                image={item.image}
+                                title={item.title}
+                                description={item.description}
+                                count={item.count}
+                                price={item.price}
+                            />
+                        ))
+                    }
+                </div>
             </section>
         </ProductSectionContainer>
     )

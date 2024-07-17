@@ -27,7 +27,6 @@ const Header = () => {
                     <div>
                         {Authenticated ? (
                                 <a href="#"
-                                    onClick={() => setAuthenticated(!Authenticated)}
                                     >Bem vindo, 
                                     <span className='userName'>
                                         usuário
@@ -46,7 +45,7 @@ const Header = () => {
                         }
                     </div>
                   
-                    <div className='cart_area'>
+                    <div className='cart_area' style={{display: Authenticated ? "flex" : "none"}}>
                         <FontAwesomeIcon className='cart_icone' icon={faCartShopping} />
                         <div className='cart_info' >
                             <p>Saldo: R$ 0,00</p>
