@@ -5,11 +5,14 @@ import { HeaderContainer,Search_area } from './HeaderStyles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faCartShopping, faBars, faSquareXmark} from '@fortawesome/free-solid-svg-icons';
 import Menu from '../navigation/Menu';
+import Btn from '../button/Btn';
+
 
 
 const Header = () => {
 
-    const [menu, setMenu] = React.useState(true);
+    const [menu, setMenu] = useState(true);
+    const [Authenticated, setAuthenticated] = useState(false);// trocar valor pelo token de autenticação
 
     return (
         <HeaderContainer>
@@ -22,15 +25,32 @@ const Header = () => {
                         <FontAwesomeIcon className='search_icone' icon={faMagnifyingGlass} />
                     </Search_area>
                     <div>
-                        <a href="#">Acessar conta</a>
-                        <a href="#">Registrar</a>
+                        {Authenticated ? (
+                                <a href="#"
+                                    onClick={() => setAuthenticated(!Authenticated)}
+                                    >Bem vindo, 
+                                    <span className='userName'>
+                                        usuário
+                                    </span>
+                                </a>
+                            ):(
+                                <>
+                                    <a  href="#"
+                                        onClick={() => setAuthenticated(!Authenticated)}
+                                    >
+                                        Acessar conta
+                                    </a>
+                                    <a href="#">Registrar</a>
+                                </>
+                            )
+                        }
                     </div>
                   
                     <div className='cart_area'>
                         <FontAwesomeIcon className='cart_icone' icon={faCartShopping} />
                         <div className='cart_info' >
                             <p>Saldo: R$ 0,00</p>
-                            <button>Adicionar saldo</button>
+                            <Btn text={"Adicionar saldo"}/>
                         </div>
                     </div>
                 </div>

@@ -28,6 +28,10 @@ export const HeaderContainer = styled.header`
             border-left: 1px solid #AB0519;
             border-right: 1px solid #AB0519;
 
+            .userName {
+                color: #AB0519;
+            }
+
             @media (max-width: 620px) {
                 padding: 0px 14px;
             }
@@ -110,20 +114,20 @@ export const HeaderContainer = styled.header`
             margin-bottom: 2px;
         }
        
-        button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #AB0519;
-            color: #fff;
-            border: none;
-            width: 110px;
-            height: 25px;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 12px;
-            cursor: pointer;
-        }
+        // button {
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     background-color: #AB0519;
+        //     color: #fff;
+        //     border: none;
+        //     width: 110px;
+        //     height: 25px;
+        //     border-radius: 10px;
+        //     font-weight: bold;
+        //     font-size: 12px;
+        //     cursor: pointer;
+        // }
     }
 
     .header_footer_area {
