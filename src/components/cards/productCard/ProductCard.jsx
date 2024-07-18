@@ -1,10 +1,20 @@
+import React, { useEffect, useState } from "react";
 import { CardContainer } from "./ProductCardStyles";
 import Count from "../../count/Count";
 import Btn from "../../button/Btn";
 
 const ProductCard = ({image, title, description, count, price}) => {
 
-    console.log(image, title, description, count, price)
+    const [priceUp, setPriceUp] = useState(1)
+
+    const handlePriceUp = (priceUp) => {
+        console.log(priceUp)
+        setPriceUp(priceUp)
+        
+    }
+
+
+    
     
     return (
         <CardContainer>
@@ -17,10 +27,12 @@ const ProductCard = ({image, title, description, count, price}) => {
                 <a href="#">Ver Jogos</a>
                 <p>{count} cotas</p>
                 <p className="priceText">
-                    <span>R$ {price} por cota</span> 
+                    <span>R$ {(price * priceUp).toFixed(2)} por cota</span>
                 </p>
             </div>
-            <Count />
+
+            <Count handlePriceUp={handlePriceUp} />
+
             <div className="footerText">
                 <p className="priceTotal">
                     <span>Total:</span>
