@@ -6,10 +6,12 @@ export const CardContainer = styled.div`
   border-radius: 15px;
   border: 1px solid #AB0519;
 
+
+
   img {
     width: 100%;
     height: 150px;
-    border-radius: 10px;
+    border-radius: 11px;
   }
 
   .headerText {
