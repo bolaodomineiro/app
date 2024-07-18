@@ -34,7 +34,6 @@ export const HeaderContainer = styled.header`
 
             @media (max-width: 560px) {
                 padding: 0px 10px;
-                flex-direction: column;
                 text-align: center;
             }
 
@@ -200,13 +199,14 @@ export const Search_area = styled.div`
         height: 30px;
         justify-content: flex-end;
         position: absolute;
-        top: 86px;
+        top: 85px;
         right: 75px;
         z-index: 2;
-        
+
         .search_icone {
             height: 20px;
         }
+
     }
 
     @media (max-width: 420px) {

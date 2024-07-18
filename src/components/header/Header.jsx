@@ -27,7 +27,8 @@ const Header = () => {
                     <div>
                         {Authenticated ? (
                                 <a href="#"
-                                    >Bem vindo, 
+                                    style={{flexDirection:Authenticated ? "column" : "row"}}
+                                >   Bem vindo, 
                                     <span className='userName'>
                                         usuário
                                     </span>
