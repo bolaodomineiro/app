@@ -30,12 +30,12 @@ const Slider = () => {
                 spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{
-                delay: 3500,
-                disableOnInteraction: false,
+                    delay: 3500,
+                    disableOnInteraction: false,
                 }}
                 loop={true}
                 pagination={{
-                clickable: true,
+                    clickable: true,
                 }}
                 navigation={true}
                 modules={[Pagination, Navigation, Autoplay]}

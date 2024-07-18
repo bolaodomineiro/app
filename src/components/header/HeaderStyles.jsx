@@ -197,11 +197,16 @@ export const Search_area = styled.div`
     }
 
     @media (max-width: 760px) {
+        height: 30px;
         justify-content: flex-end;
         position: absolute;
-        top: 83px;
+        top: 86px;
         right: 75px;
         z-index: 2;
+        
+        .search_icone {
+            height: 20px;
+        }
     }
 
     @media (max-width: 420px) {

@@ -4,11 +4,10 @@ import Count from "../../count/Count";
 import Btn from "../../button/Btn";
 
 const ProductCard = ({image, title, description, count, price}) => {
-
+  
     const [priceUp, setPriceUp] = useState(1)
 
     const handlePriceUp = (priceUp) => {
-        console.log(priceUp)
         setPriceUp(priceUp)
         
     }
