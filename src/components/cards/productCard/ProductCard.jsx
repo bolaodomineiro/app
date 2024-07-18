@@ -27,7 +27,7 @@ const ProductCard = ({image, title, description, count, price}) => {
                 <a href="#">Ver Jogos</a>
                 <p>{count} cotas</p>
                 <p className="priceText">
-                    <span>R$ {(price * priceUp).toFixed(2)} por cota</span>
+                    <span>R$ {price.toFixed(2)} por cota</span>
                 </p>
             </div>
 
@@ -36,7 +36,7 @@ const ProductCard = ({image, title, description, count, price}) => {
             <div className="footerText">
                 <p className="priceTotal">
                     <span>Total:</span>
-                    R$ 30,00
+                    R$ {(price * priceUp).toFixed(2)} 
                 </p>
                 <Btn text={"Jogar agora"} />
             </div>
