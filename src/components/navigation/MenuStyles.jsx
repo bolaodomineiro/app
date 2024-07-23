@@ -26,6 +26,11 @@ export const MenuContainer = styled.nav`
         height: 100%;
         position: relative;
         text-align: left;
+        trasition: all 0.3s ease;
+
+        &:hover {
+            color: #AB0519;
+        }
     }
 
     li:nth-child(6) {
@@ -66,6 +71,7 @@ export const MenuContainer = styled.nav`
 
         li:hover {
            background-color: #f8f8f8;
+           color: #AB0519;
         }
 
         
@@ -74,6 +80,7 @@ export const MenuContainer = styled.nav`
     li:hover:nth-child(3) .dropdown {
         display: block;
         height: auto;
+        color: #000;
     }
 
 

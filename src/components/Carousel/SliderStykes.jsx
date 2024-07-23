@@ -80,9 +80,10 @@ export const BenefitsOverview = styled.section`
         div:not(:first-child) {
             border-left: 1px solid #fff;
         }
+
+        
     }
 
-    // @media (max-width: 840px) {
-    //     height: 100px;
-    // }
+    
+
 `

@@ -36,4 +36,9 @@ export const ProductSectionContainer = styled.section`
             gap: 20px;
         }
     }
+
+    @media (max-width: 500px) { 
+
+        padding: 0px 10px 60px;
+    }
 `

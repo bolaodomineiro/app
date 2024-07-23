@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Logo from '../../assets/images/logotipo.png';
 import { HeaderContainer,Search_area } from './HeaderStyles';
 
@@ -14,8 +14,17 @@ const Header = () => {
     const [menu, setMenu] = useState(true);
     const [Authenticated, setAuthenticated] = useState(false);// trocar valor pelo token de autenticação
 
+    const headerRef = useRef(null);
+
+    const handleClickOutside = (event) => {
+        if (headerRef.current && !headerRef.current.contains(event.target)) {
+            setMenu(true);
+        }
+    };
+    document.addEventListener('click', handleClickOutside);
+
     return (
-        <HeaderContainer>
+        <HeaderContainer ref={headerRef}>
             <div className='header_top_area'>
                 <img className='logo' src={Logo} alt="logo" />
                 <div className='header_top_area_right'>
@@ -58,7 +67,7 @@ const Header = () => {
             <section 
                 className='header_footer_area'
             >
-                <Menu toggleMenu={menu} />
+                <Menu toggleMenu={menu} setMenu={setMenu} />
 
                 {   
                     menu ? <FontAwesomeIcon 

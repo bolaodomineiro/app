@@ -8,15 +8,14 @@ export const CardContainer = styled.div`
     padding: 10px 60px;
     color: #fff;
     gap: 5px;
-    
-    
+
 
     p{
         font-size: 1.2rem;
         font-weight: bold;
         width: 95px;
         text-align: center;
-    
+        
     }
 
     .benefits_icone {
@@ -31,7 +30,7 @@ export const CardContainer = styled.div`
 
         p{
             font-size: 0.9rem;
-            width: 75px;
+            width: 70px;
         }
 
         .benefits_icone {
@@ -64,20 +63,20 @@ export const CardContainer = styled.div`
     }
 
     @media (max-width: 419px) {
-        padding: 0px 17px;
-        height: 35px;
-
+        width: 107px;
+       
         p{
-            width: 40px;
+            font-size: 0.6rem;
+            width: 60px;
         }
 
         .benefits_icone:nth-child(1) {
-           margin-left: -8px;
-        
+            width: 30px;
         }
 
     }
 
-   
+  
+
  
 `

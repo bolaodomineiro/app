@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const CardContainer = styled.div`
   width: 300px;
-
   border-radius: 15px;
   border: 1px solid #AB0519;
 
@@ -77,5 +76,6 @@ export const CardContainer = styled.div`
         padding: 20px 0px;
         
     }
+    
 
 `

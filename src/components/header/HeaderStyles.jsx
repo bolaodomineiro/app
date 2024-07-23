@@ -6,6 +6,7 @@ export const HeaderContainer = styled.header`
     background-color: #fff;    
    
     .header_top_area {
+
         display: flex;
         height: 80px;
         width: 100%;
@@ -14,10 +15,13 @@ export const HeaderContainer = styled.header`
         position: relative;
 
         @media (max-width: 420px) {
+
             padding: 0px 10px;
+
         }
 
         a{
+
             display: flex;
             height: 35px;
             align-items: center;
@@ -29,39 +33,52 @@ export const HeaderContainer = styled.header`
             border-right: 1px solid #AB0519;
 
             .userName {
+
                 color: #AB0519;
+
             }
 
             @media (max-width: 560px) {
-                padding: 0px 10px;
+
+                padding: 0px 8px;
                 text-align: center;
+                font-size: 0.8rem;
+
             }
 
 
         }
         
         a:nth-child(2) {
+
             padding-right: 0px;
             border: none;
 
         }
 
         .logo {
+
             width: 110px;
             height: 100px;
             position: absolute;
-            top: 10px;
+            top: 12px;
             left: 35px;
             z-index: 3;
 
 
             @media (max-width: 480px) {
                 left: 10px;
+                width: 100px;
+                height: 90px;
+                top: 17px;
+               
+           
             }
         }   
     }
 
     .header_top_area_right {
+
         display: flex;
         align-items: center;
         gap: 20px;
@@ -72,6 +89,7 @@ export const HeaderContainer = styled.header`
     }
 
     .header_top_area_right  div{
+
         display: flex;
         align-items: center;
 
@@ -94,23 +112,28 @@ export const HeaderContainer = styled.header`
         @media (max-width: 580px) {
             height:auto;
         }
+
      }
     
     .cart_icone {
+
         margin-right: 20px;
         margin-left: 20px;
         width: 45px;
         height: 40px;
         color: #AB0519;
+        position: relative;
 
         @media (max-width: 470px) {
             margin-right: 10px;
             margin-left: 10px;
           
         }
+
     }
 
     .header_top_area_right .cart_area {
+
         
         p {
             font-size: 14px;
@@ -122,6 +145,7 @@ export const HeaderContainer = styled.header`
     }
 
     .header_footer_area {
+
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -149,13 +173,17 @@ export const HeaderContainer = styled.header`
         }
        
         @media (max-width: 420px) {
+
             padding: 0px 10px;
+
         }
+
     }
 
        
 `
 export const Search_area = styled.div`
+
     display: flex;
     align-items: center;
     gap: 10px;
@@ -166,6 +194,7 @@ export const Search_area = styled.div`
     position: relative;
 
     .search_icone {
+
         width: 20px;
         height: 20px;
         color: #AB0519;
@@ -175,13 +204,16 @@ export const Search_area = styled.div`
         z-index: 1;
 
         @media (max-width: 800px) {
+
             width: 25px;
             height: 25px;
             margin-right: 0px;
+
         }
     }
 
     input {
+
         width: 100%;
         height: 100%;
         border-radius: 30px;
@@ -192,10 +224,11 @@ export const Search_area = styled.div`
         z-index: 2;
         cursor: pointer;
         font-size: 0.7rem;
-        color: #B7B7B7;
+        color: #000;
     }
 
     @media (max-width: 760px) {
+
         height: 30px;
         justify-content: flex-end;
         position: absolute;
@@ -204,17 +237,23 @@ export const Search_area = styled.div`
         z-index: 2;
 
         .search_icone {
+
             height: 20px;
+
         }
 
     }
 
     @media (max-width: 420px) {
+
       right: 45px;
+
     }
 
     @media (max-width: 360px) {
+
       width: 150px;
+      
     }
 
   

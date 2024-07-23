@@ -33,4 +33,11 @@ export const CountContainer = styled.div`
         font-weight: bold;
         font-size: 1rem;
     }
+
+    @media (max-width: 690px) {
+
+         .quantity {
+             width: 80px;
+         }
+    }
  `
