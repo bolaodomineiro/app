@@ -26,7 +26,7 @@ export const HeaderContainer = styled.header`
             height: 35px;
             align-items: center;
             color: #000;
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: bold;
             padding: 0px 20px;
             border-left: 1px solid #AB0519;
@@ -104,6 +104,10 @@ export const HeaderContainer = styled.header`
         flex-direction: column;
         justify-content: center;
         height: 80px;
+
+        button {
+            font-size: 0.7rem;
+        }
 
         @media (max-width: 800px) {
               height: 75px;

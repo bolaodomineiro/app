@@ -18,7 +18,7 @@ export const MenuContainer = styled.nav`
         justify-content: center;
         align-items: center;
         padding: 0px 20px;
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-weight: bold;
         cursor: pointer;
         font-weight: bold;

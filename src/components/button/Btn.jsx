@@ -1,10 +1,12 @@
 import React from 'react';
 import { ButtonContainer } from "./ButtonStyles";
 
-const Btn = ({text}) =>{
+const Btn = ({text, onClick}) =>{
 
     return (
-        <ButtonContainer>
+        <ButtonContainer
+            onClick={ onClick }
+        >
             {text}
         </ButtonContainer>
     )

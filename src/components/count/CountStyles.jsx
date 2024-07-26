@@ -4,7 +4,7 @@ export const CountContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap:14px;
     width: 100%;
     padding: 10px 0px;
 
@@ -12,12 +12,13 @@ export const CountContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 22px;
-        height: 22px;
+        width: 30px;
+        height: 30px;
         border-radius: 50%;
-        background-color: #D9D9D9;
+        background-color: #AB0519;
+        color: #fff;
         font-weight: bold;
-        font-size: 1rem;
+        font-size: 1.1rem;
         cursor: pointer;
     }
 
@@ -25,10 +26,10 @@ export const CountContainer = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 110px;
-        height: 30px;
+        min-width: 150px;
+        height: 40px;
         border-radius: 30px;
-        border: 1px solid #000;
+        border: 1px solid #AB0519;
         color: #000;
         font-weight: bold;
         font-size: 1rem;

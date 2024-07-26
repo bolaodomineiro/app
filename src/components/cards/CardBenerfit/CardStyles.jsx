@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 export const CardContainer = styled.div`
     display: flex;
-    height: 60px;
+    flex:1;
     align-items: center;
     justify-content: center;
-    padding: 10px 60px;
     color: #fff;
-    gap: 5px;
+  
 
 
     p{
@@ -21,12 +20,12 @@ export const CardContainer = styled.div`
     .benefits_icone {
         height: 60px;
         width: 50px;
+       
     }
 
     @media (max-width: 840px) {
-        padding: 0px 20px;
+  
         height: 45px;
-      
 
         p{
             font-size: 0.9rem;
@@ -39,7 +38,7 @@ export const CardContainer = styled.div`
     }
 
     @media (max-width: 640px) {
-        padding: 0px 20px;
+    
         height: 35px;
 
         .benefits_icone {
@@ -49,7 +48,7 @@ export const CardContainer = styled.div`
     }
 
     @media (max-width: 520px) {
-       
+    
         p{
             font-size: 0.6rem;
             width: 50px;
@@ -63,15 +62,15 @@ export const CardContainer = styled.div`
     }
 
     @media (max-width: 419px) {
-        width: 107px;
+       
        
         p{
             font-size: 0.6rem;
             width: 60px;
         }
 
-        .benefits_icone:nth-child(1) {
-            width: 30px;
+        .benefits_icone{
+            width: 25px;
         }
 
     }

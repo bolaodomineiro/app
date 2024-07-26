@@ -11,6 +11,6 @@ export const ButtonContainer = styled.button`
     padding: 5px;
     border-radius: 30px;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 1rem;
     cursor: pointer;
 `
