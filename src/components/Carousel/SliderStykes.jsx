@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SliderShow = styled.section`
     width: 100%;
-    padding: 0px 35px;
+    padding: 0px 70px;
 
     @media (max-width: 930px) {
         padding: 0px 0px;
@@ -10,7 +10,7 @@ export const SliderShow = styled.section`
 
    .swiper {
         width: 100%;
-        height: 400px;
+        height: 350px;
 
         .slide {
             height: 100%;
@@ -72,7 +72,7 @@ export const BenefitsOverview = styled.section`
         display: flex;
         align-items: center;
         height: 100%;
-        width: calc(100% - 20%);
+        width: calc(100% - 30%);
         
         position: relative;
         top: -10px;
@@ -82,8 +82,8 @@ export const BenefitsOverview = styled.section`
             border-left: 1px solid #fff;
         }
 
-         @media (max-width: 600px) {
-             width: calc(100% - 5%);
+         @media (max-width: 840px) {
+            width: calc(100% - 5%);
         }
 
         @media (max-width: 350px) {

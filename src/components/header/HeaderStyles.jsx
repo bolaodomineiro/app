@@ -8,16 +8,20 @@ export const HeaderContainer = styled.header`
     .header_top_area {
 
         display: flex;
-        height: 80px;
+        height: 105px;
         width: 100%;
         justify-content: flex-end;
-        padding: 0px 35px;
+        padding: 0px 70px;
         position: relative;
 
+        @media (max-width: 930px) {
+            padding: 0px 20px;
+        }
+
+      
+
         @media (max-width: 420px) {
-
-            padding: 0px 10px;
-
+           padding: 0px 10px;
         }
 
         a{
@@ -28,24 +32,21 @@ export const HeaderContainer = styled.header`
             color: #000;
             font-size: 1rem;
             font-weight: bold;
-            padding: 0px 20px;
-            border-left: 1px solid #AB0519;
+            padding: 20px;
             border-right: 1px solid #AB0519;
+            border-left: 1px solid #AB0519;
 
             .userName {
-
                 color: #AB0519;
-
             }
 
-            @media (max-width: 560px) {
+            @media (max-width: 630px) {
 
                 padding: 0px 8px;
                 text-align: center;
                 font-size: 0.8rem;
-
-            }
-
+                
+            }      
 
         }
         
@@ -58,21 +59,19 @@ export const HeaderContainer = styled.header`
 
         .logo {
 
-            width: 110px;
-            height: 100px;
+            width: 140px;
+            height: 130px;
             position: absolute;
             top: 12px;
-            left: 35px;
+            left: 70px;
             z-index: 3;
 
-
-            @media (max-width: 480px) {
+            @media (max-width: 930px) {
+                left: 20px;
+            }
+            
+            @media (max-width: 420px) {
                 left: 10px;
-                width: 100px;
-                height: 90px;
-                top: 17px;
-               
-           
             }
         }   
     }
@@ -83,8 +82,38 @@ export const HeaderContainer = styled.header`
         align-items: center;
         gap: 20px;
 
-        @media (max-width: 560px) {
+        .user_area {
+
+            border-right: 1px solid #AB0519;
+            border-left: 1px solid #AB0519;
+            padding: 0px 20px;
+
+            img {
+                width: 40px;
+                height: 40px;
+
+                @media (max-width: 580px) {
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+            
+            @media (max-width: 376px) {
+
+                padding: 0px 10px;
+      
+            }
+
+        }
+
+        @media (max-width: 630px) {
             gap: 0px;
+        }
+
+        @media (max-width: 580px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
         }
     }
 
@@ -153,7 +182,7 @@ export const HeaderContainer = styled.header`
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        padding: 0px 35px;
+        padding: 0px 70px;
         width: 100%;
         height: 40px;
         background-color: #F3EED9;
@@ -169,16 +198,19 @@ export const HeaderContainer = styled.header`
     
         }
 
+        @media (max-width: 930px) {
+            padding: 0px 20px;
+        }
+
         @media (max-width: 800px) {
             .menu_icone {
                 display:block;
             }
-
         }
-       
+
         @media (max-width: 420px) {
 
-            padding: 0px 10px;
+           padding: 0px 10px;
 
         }
 
@@ -214,6 +246,7 @@ export const Search_area = styled.div`
             margin-right: 0px;
 
         }
+
     }
 
     input {
@@ -231,13 +264,13 @@ export const Search_area = styled.div`
         color: #000;
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 800px) {
 
         height: 30px;
         justify-content: flex-end;
         position: absolute;
-        top: 85px;
-        right: 75px;
+        top: 110px;
+        right: 60px;
         z-index: 2;
 
         .search_icone {
@@ -254,9 +287,9 @@ export const Search_area = styled.div`
 
     }
 
-    @media (max-width: 360px) {
+    @media (max-width: 376px) {
 
-      width: 150px;
+      width: 130px;
       
     }
 

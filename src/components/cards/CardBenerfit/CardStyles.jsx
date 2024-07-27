@@ -28,8 +28,8 @@ export const CardContainer = styled.div`
         height: 45px;
 
         p{
-            font-size: 0.9rem;
-            width: 70px;
+            font-size: 1rem;
+            width: 80px;
         }
 
         .benefits_icone {
@@ -43,15 +43,14 @@ export const CardContainer = styled.div`
 
         .benefits_icone {
             height: 45px;
-            width: 35px;
         }
     }
 
     @media (max-width: 520px) {
     
         p{
-            font-size: 0.6rem;
-            width: 50px;
+            font-size: 0.8rem;
+            width: 60px;
         }
 
         .benefits_icone {

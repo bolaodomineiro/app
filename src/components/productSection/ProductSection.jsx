@@ -8,6 +8,8 @@ import Box01 from "../../assets/images/Box1.png";
 import Box02 from "../../assets/images/Box2.png";
 import Box03 from "../../assets/images/Box3.png";
 
+
+
 /// data example
 const data = [
     {

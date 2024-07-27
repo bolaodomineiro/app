@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../../components/header/Header';
 import Slider from '../../components/Carousel/Slider';
 import ProductSection from '../../components/productSection/ProductSection';
+import ResultSection from '../../components/resultsection/ResultSection';
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
             <Header />
             <Slider />
             <ProductSection />
+            <ResultSection />
         </section>
     )
 }

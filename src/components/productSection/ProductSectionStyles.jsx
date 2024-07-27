@@ -30,14 +30,16 @@ export const ProductSectionContainer = styled.section`
 
         .productCards {
             display: flex;
-            width: 96%;
+            width: 95%;
             justify-content:center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 45px;
+            gap: 90px;
+            padding: 0px 20px;
 
-            @media (max-width: 1193px) { 
+            @media (max-width: 1578px) { 
                 gap: 30px;
+                width: 100%;
             }
 
         }
@@ -52,7 +54,7 @@ export const ProductSectionContainer = styled.section`
         }
     }
 
-    @media (max-width: 1293px) { 
+    @media (max-width: 1578px) { 
         padding: 0px 0px 60px;
     }
 

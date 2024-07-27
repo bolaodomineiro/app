@@ -35,13 +35,17 @@ const Header = () => {
                     </Search_area>
                     <div>
                         {Authenticated ? (
-                                <a href="#"
-                                    style={{flexDirection:Authenticated ? "column" : "row"}}
-                                >   Bem vindo, 
+                            <div className='user_area'>
+                                <a href="#" 
+                                    style={{border: "none",paddingLeft: "0px "}} 
+                                > Bem vindo, 
                                     <span className='userName'>
                                         usuário
                                     </span>
                                 </a>
+                                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
+                            </div>
+                             
                             ):(
                                 <>
                                     <a  href="#"
