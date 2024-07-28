@@ -1,5 +1,5 @@
 import React from "react";
-import { SliderShow, BenefitsOverview } from "./SliderStykes";
+import { SliderShow, BenefitsOverview } from "./SliderStyles";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faLock, faAward,faDollarSign} from '@fortawesome/free-solid-svg-icons';
 import { Swiper, SwiperSlide } from 'swiper/react';// Import Swiper React components

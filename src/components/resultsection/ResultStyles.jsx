@@ -12,11 +12,17 @@ export const ResultContainer = styled.div`
         h3 {
             color: #AB0519;
             font-size: 3rem;
+
+            @media (max-width: 320px) {
+                font-size:2.2rem;
+            }
         }
 
         p {
             font-weight: bold;
             font-size: 1.8rem;
+
+          
         }
     }
 

@@ -35,8 +35,9 @@ export const HeaderContainer = styled.header`
             padding: 20px;
             border-right: 1px solid #AB0519;
             border-left: 1px solid #AB0519;
+            transition: all 0.3s ease;
 
-            .userName {
+            &:hover {
                 color: #AB0519;
             }
 
@@ -81,12 +82,21 @@ export const HeaderContainer = styled.header`
         display: flex;
         align-items: center;
         gap: 20px;
-
+            
         .user_area {
 
             border-right: 1px solid #AB0519;
             border-left: 1px solid #AB0519;
             padding: 0px 20px;
+            margin-right: 20px;
+
+            span {
+                color: #AB0519;
+                font-weight: bold;
+                font-size: 1rem;
+                padding: 0px 10px;
+                
+            }
 
             img {
                 width: 40px;
@@ -97,15 +107,21 @@ export const HeaderContainer = styled.header`
                     height: 35px;
                 }
             }
-            
-            @media (max-width: 376px) {
 
+            button {
+                font-size: 0.7rem;
+                width: 60px;
+                margin-left: 10px;
+            }
+
+        
+            @media (max-width: 376px) {
                 padding: 0px 10px;
-      
             }
 
         }
 
+    
         @media (max-width: 630px) {
             gap: 0px;
         }
@@ -166,7 +182,6 @@ export const HeaderContainer = styled.header`
     }
 
     .header_top_area_right .cart_area {
-
         
         p {
             font-size: 14px;

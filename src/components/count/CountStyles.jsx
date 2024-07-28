@@ -20,25 +20,30 @@ export const CountContainer = styled.div`
         font-weight: bold;
         font-size: 1.1rem;
         cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #e90621;
+        }
     }
 
     .quantity {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 150px;
+        text-align: center;
+        width: 150px;
         height: 40px;
         border-radius: 30px;
         border: 1px solid #AB0519;
         color: #000;
         font-weight: bold;
         font-size: 1rem;
+
+        @media (max-width: 690px) {
+            width: 125px;
+        }
+
     }
 
-    @media (max-width: 690px) {
+    
 
-         .quantity {
-             width: 80px;
-         }
-    }
+    
  `

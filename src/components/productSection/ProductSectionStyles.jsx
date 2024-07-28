@@ -14,13 +14,34 @@ export const ProductSectionContainer = styled.section`
             color: #AB0519;
             font-weight: bold;
             font-size: 4rem;
+
+            @media (max-width: 1300px) { 
+                font-size: 2.2rem;
+            }
+
+            @media (max-width: 470px) {
+                font-size: 1.7rem;
+            }
+
+            @media (max-width: 370px) {
+                font-size:1.2rem;
+            }
         }
 
         p {
             text-align: center;
             font-weight: bold;
             font-size: 2.5rem;
+
+             @media (max-width: 1300px) {
+                font-size: 1.2rem;
+             }
+
+             @media (max-width: 400px) {
+                font-size: 1.2rem;
+             }
         }
+
     }
 
     .productSection {
@@ -57,43 +78,6 @@ export const ProductSectionContainer = styled.section`
     @media (max-width: 1578px) { 
         padding: 0px 0px 60px;
     }
-
-    @media (max-width: 1300px) { 
-        .textContent {
-            h3 {    
-                font-size: 2.3rem;
-            }
-
-            p {
-                font-size: 1.2rem;
-            }   
-        }
-    }
-
-    @media (max-width: 500px) { 
-        .textContent {
-            h3 {    
-                font-size: 1.8rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }   
-        }
-    }
-
-    @media (max-width: 400px) { 
-        .textContent {
-            h3 {    
-                font-size: 1.4rem;
-            }
-
-            p {
-                font-size: 1.2rem;
-            }   
-        }
-    }
-
 
 
 `

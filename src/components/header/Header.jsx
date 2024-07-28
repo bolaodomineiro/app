@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Logo from '../../assets/images/logotipo.png';
-import { HeaderContainer,Search_area } from './HeaderStyles';
+import { HeaderContainer, Search_area } from './HeaderStyles';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faCartShopping, faBars, faSquareXmark} from '@fortawesome/free-solid-svg-icons';
@@ -35,17 +35,16 @@ const Header = () => {
                     </Search_area>
                     <div>
                         {Authenticated ? (
-                            <div className='user_area'>
-                                <a href="#" 
-                                    style={{border: "none",paddingLeft: "0px "}} 
-                                > Bem vindo, 
-                                    <span className='userName'>
-                                        usuário
-                                    </span>
-                                </a>
-                                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
-                            </div>
-                             
+                                <div className='user_area'>
+                                    <di> 
+                                        Bem vindo,  
+                                        <span className='userName'>
+                                            usuário
+                                        </span>
+                                    </di>
+                                    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
+                                    <Btn text={"Sair"} />
+                                </div>
                             ):(
                                 <>
                                     <a  href="#"

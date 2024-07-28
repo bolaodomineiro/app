@@ -10,7 +10,12 @@ const Count = ({handlePriceUp}) => {
             <div className="btn-decrease"
                 onClick={() => {setCount(count > 1 ? count - 1 : 1); handlePriceUp(count > 1 ? count - 1 : 1)}}
             >-</div>
-            <div className="quantity">{count}</div>
+            <input 
+                className="quantity"
+                value={count}
+                type="text"
+                disabled 
+            />
             <div className="btn-increase"
                 onClick={() => {setCount(count + 1); handlePriceUp(count + 1)}}
             >+</div>
