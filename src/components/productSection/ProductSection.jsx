@@ -4,9 +4,9 @@ import ProductCard from "../cards/productCard/ProductCard"
 import TextBox from "../textContent/TextBox"
 import Btn from "../button/Btn"
 
-import Box01 from "../../../dist/assets/Box1.avif";
-import Box02 from "../../../dist/assets/Box2.avif";
-import Box03 from "../../../dist/assets/Box3.avif";
+import Box01 from "../../assets/images/Box1.png";
+import Box02 from "../../assets/images/Box2.png";
+import Box03 from "../../assets/images/Box3.png";
 
 
 
