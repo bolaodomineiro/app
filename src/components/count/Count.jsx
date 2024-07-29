@@ -10,7 +10,8 @@ const Count = ({handlePriceUp}) => {
             <div className="btn-decrease"
                 onClick={() => {setCount(count > 1 ? count - 1 : 1); handlePriceUp(count > 1 ? count - 1 : 1)}}
             >-</div>
-            <input 
+            <input
+                aria-label="Quantity" 
                 className="quantity"
                 value={count}
                 type="text"

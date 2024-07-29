@@ -3,7 +3,7 @@ import { BaseboardContainer } from "./BaseboardStyles";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faCirclePlay } from '@fortawesome/free-solid-svg-icons';
-import {faFacebook, faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
+import {faFacebook, faSquareInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 
 const Baseboard = () => {
@@ -13,21 +13,27 @@ const Baseboard = () => {
                 <div className="socialMedias">
                     <p>Siga nossas Redes Sociais e fique por dentro!</p>
                     <div className="socialIcons">
-                        <a href="">
+                        <a href="#">
                             <FontAwesomeIcon className="socialMediaIcon" icon={faFacebook} />
                         </a>
-                        <a href="">
+                        <a href="#">
                             <FontAwesomeIcon className="socialMediaIcon" icon={faSquareInstagram} />
                         </a>
-                        <a href="">
+                        <a href="#">
                             <FontAwesomeIcon className="socialMediaIcon" icon={faCirclePlay} />
                         </a>
                     </div>
                 </div>
             </section>
             <section className="baseboarBoxInfor">
-
-            </section>
+                <a href="#">
+                            <FontAwesomeIcon className="contactMessage" icon={faWhatsapp} />
+                            <div className="balloon">
+                                <h4>Precisa de ajuda?</h4>
+                                <p>Chama a gente no WhatsApp, e tire suas dúvidas conosco!</p>
+                            </div>
+                        </a>
+                </section>
         </BaseboardContainer>
     )
 }
