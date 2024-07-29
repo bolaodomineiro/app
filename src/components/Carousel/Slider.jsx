@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';// import required modules
-import Slid01 from  '../../assets/images/slide01.png';// import banners
+import Slid01 from  '../../../dist/assets/slide.avif';// import banners
 import Card from "../cards/CardBenerfit/Card";
 
 const Slider = () => {

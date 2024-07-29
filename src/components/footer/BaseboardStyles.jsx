@@ -123,7 +123,7 @@ export const BaseboardContainer = styled.footer`
             color: #000;
             box-shadow: 0px 3px 4px 2px rgba(0, 0, 0, 0.3);
             trasition: all 1s;
-            animation: display 10s ;
+            animation: display 10s 5s ;
 
             @keyframes display {
                 0%, 90% {

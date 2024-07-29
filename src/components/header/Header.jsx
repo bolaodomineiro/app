@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import Logo from '../../assets/images/logotipo.png';
+import Logo from '../../../dist/assets/logotipo.avif';
 import { HeaderContainer, Search_area } from './HeaderStyles';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

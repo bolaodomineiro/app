@@ -23,3 +23,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Ignorar a pasta de build
+dist/
+
