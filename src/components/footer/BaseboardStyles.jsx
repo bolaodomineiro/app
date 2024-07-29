@@ -96,18 +96,7 @@ export const BaseboardContainer = styled.footer`
             right: 30px;
             bottom: 370px;
             z-index: 99;
-            // animation: pulse 1s infinite;
             border-radius: 50%;
-        
-         
-            // @keyframes pulse {
-            //     from {
-            //         box-shadow: 0 0 0 5px rgba(171, 5, 24, 0.814), inset  0 0 0 11px rgba(171, 5, 24, 1);
-            //     }
-            //     to {
-            //         box-shadow: 0 0 0 16px rgba(0, 0, 0, 0),  inset  0 0 0 11px rgba(171, 5, 24, 0);
-            //     }
-            // }
         }
 
         .balloon {
