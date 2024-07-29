@@ -85,39 +85,49 @@ export const BaseboardContainer = styled.footer`
         position: relative;
 
         .contactMessage {
-            width: 80px;
-            height: 80px;
-            color: #AB0519;
+            width: 60px;
+            height: 60px;
+            color: #000;
             cursor: pointer;
             font-weight: 700;
             font-size: calc(1.8rem + 0.8vw);
             text-align: center;
             position:fixed;
-            right: 30px;
-            bottom: 370px;
+            right: 25px;
+            bottom: 10px;
             z-index: 99;
             border-radius: 50%;
+
+            @media (max-width: 370px) {
+                height: 50px;
+                width: 50px;
+                right: 10px;
+            }
         }
 
         .balloon {
             opacity: 0;
             position: fixed;
             z-index: -1;
-            padding: 10px 15px;
-            width: 280px;
+            padding: 5px 10px;
             background-color: #ededed;
-            right:125px;
-            bottom: 370px;
-            border-radius: 12px;
+            right: 90px;
+            bottom: 10px;
+            border-radius: 8px;
             color: #000;
-            box-shadow: 0px 3px 4px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.3);
+            animation: animationOpacity 12s 5s ;
             trasition: all 1s;
-            animation: display 10s 5s ;
 
-            @keyframes display {
-                0%, 90% {
-                    opacity: 1;
+            @keyframes animationOpacity {
+                0%, 20% {
+                    opacity: 0.5;
                     z-index: 99;
+                }
+
+                20%, 90% {
+                    opacity: 1;
+                    z-index: 99; 
                 }
                 100%{
                     opacity: 0;
@@ -126,14 +136,31 @@ export const BaseboardContainer = styled.footer`
             }
 
             h4 {
-                font-size: 1rem;
+                font-size: 0.8rem;
                 font-weight: 500;
             }
 
             p {
-                font-size: 0.8rem;
-                line-height: 1.5;
+                font-size: 0.7rem;
+                line-height: 1.4;
+                width: 230px;
             }
+
+            @media (max-width: 370px) {
+                right: 70px;
+
+                h4 {
+                    font-size: 0.7rem;
+                }
+                
+                p {
+                    width: 160px;
+                    font-size: 0.6rem;
+                }
+
+                
+            }
+
         }
 
         .contactMessage:hover + .balloon {
