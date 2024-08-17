@@ -21,18 +21,18 @@ export const BaseboardContainer = styled.footer`
 
             p {
                 font-weight: 700;
-                font-size: calc(1.8rem + 0.8vw);
+                font-size: calc(1.5rem + 0.8vw);
                 text-align: center;
                 padding-top: 30px;
 
                 @media (max-width: 530px) {
-                   font-size: calc(1.2rem + 0.8vw);
-                   padding-top: 10px;
+                    font-size: calc(1.2rem + 0.8vw);
+                    padding-top: 10px;
                 }
 
-                 @media (max-width: 400px) {
+                @media (max-width: 400px) {
                     font-size: calc(1rem + 0.8vw);
-                 }
+                }
 
                 @media (max-width: 370px) {
                     font-size: calc(0.8rem + 0.8vw);
@@ -52,18 +52,17 @@ export const BaseboardContainer = styled.footer`
                 }
 
                 .socialMediaIcon{
-                    height:100px;
-                    width: 100px;
+                    height:70px;
+                    width: 70px;
                     color: #AB0519;
                     cursor: pointer;
                     border-radius: 50%;
-                    box-shadow:inset 0px 0px 0px 10px #AB0519;
+                    box-shadow:inset 0px 0px 0px 6px #AB0519;
                     overflow: hidden;
+                    transition: all 0.3s;
 
-                    @media (max-width: 530px) {
-                        height:80px;
-                        width: 80px;
-                        box-shadow:inset 0px 0px 0px 5px #AB0519;
+                    &:hover {
+                        color: #e90621;
                     }
 
                     @media (max-width: 370px) {
@@ -84,40 +83,43 @@ export const BaseboardContainer = styled.footer`
         background-color: #AB0519;
         position: relative;
 
-        .contactMessage {
+        .whats-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 60px;
             height: 60px;
-            color: #000;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: calc(1.8rem + 0.8vw);
-            text-align: center;
+            padding: 10px;
+            background-color: #00A884;
             position:fixed;
             right: 25px;
             bottom: 10px;
             z-index: 99;
             border-radius: 50%;
+            cursor: pointer;
+            trasition: all 0.5s;
+        }
 
-            @media (max-width: 370px) {
-                height: 50px;
-                width: 50px;
-                right: 10px;
-            }
+        .whatsappIcon {
+            color: #fff;
+            width: 40px;
+            height: 40px;
+
         }
 
         .balloon {
             opacity: 0;
             position: fixed;
-            z-index: -1;
+            z-index: 99;
             padding: 5px 10px;
             background-color: #ededed;
-            right: 90px;
+            right: 100px;
             bottom: 10px;
             border-radius: 8px;
             color: #000;
             box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.3);
             animation: animationOpacity 12s 5s ;
-            trasition: all 1s;
+            transition: opacity 0.5s ease;
 
             @keyframes animationOpacity {
                 0%, 20% {
@@ -147,7 +149,7 @@ export const BaseboardContainer = styled.footer`
             }
 
             @media (max-width: 370px) {
-                right: 70px;
+                right: 100px;
 
                 h4 {
                     font-size: 0.7rem;
@@ -163,7 +165,7 @@ export const BaseboardContainer = styled.footer`
 
         }
 
-        .contactMessage:hover + .balloon {
+        .whats-btn:hover + .balloon {
             opacity: 1;
             z-index: 99;
         }

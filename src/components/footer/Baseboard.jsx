@@ -27,13 +27,15 @@ const Baseboard = () => {
             </section>
             <section className="baseboarBoxInfor">
                 <a href="#">
-                            <FontAwesomeIcon className="contactMessage" icon={faWhatsapp} />
-                            <div className="balloon">
-                                <h4>Precisa de ajuda?</h4>
-                                <p>Chama a gente no WhatsApp, e tire suas dúvidas conosco!</p>
-                            </div>
-                        </a>
-                </section>
+                    <div className="whats-btn">
+                        <FontAwesomeIcon className="whatsappIcon" icon={faWhatsapp} />
+                    </div>
+                    <div className="balloon">
+                        <h4>Precisa de ajuda?</h4>
+                        <p>Chama a gente no WhatsApp, e tire suas dúvidas conosco!</p>
+                    </div>
+                </a>
+            </section>
         </BaseboardContainer>
     )
 }

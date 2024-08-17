@@ -28,7 +28,7 @@ const Header = () => {
             <div className='header_top_area'>
                 <img className='logo' src={Logo} alt="logo" />
                 <div className='header_top_area_right'>
-                  
+                    
                     <Search_area>
                         <input type="text" placeholder="Buscar aposta"/>
                         <FontAwesomeIcon className='search_icone' icon={faMagnifyingGlass} />
@@ -36,12 +36,12 @@ const Header = () => {
                     <div>
                         {Authenticated ? (
                                 <div className='user_area'>
-                                    <di> 
+                                    <div> 
                                         Bem vindo,  
                                         <span className='userName'>
                                             usuário
                                         </span>
-                                    </di>
+                                    </div>
                                     <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
                                     <Btn text={"Sair"} />
                                 </div>
@@ -57,7 +57,7 @@ const Header = () => {
                             )
                         }
                     </div>
-                  
+                    
                     <div className='cart_area' style={{display: Authenticated ? "flex" : "none"}}>
                         <FontAwesomeIcon className='cart_icone' icon={faCartShopping} />
                         <div className='cart_info' >

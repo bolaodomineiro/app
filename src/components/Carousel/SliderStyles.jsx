@@ -8,7 +8,7 @@ export const SliderShow = styled.section`
         padding: 0px 0px;
     }
 
-   .swiper {
+    .swiper {
         width: 100%;
         height: 350px;
 
@@ -26,6 +26,11 @@ export const SliderShow = styled.section`
             height: 40px;
             border-radius:6PX;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: #e90621;
+            }
         }
 
         .swiper-button-next:after,

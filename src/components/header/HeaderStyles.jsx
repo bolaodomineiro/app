@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header`
 
     width: 100%;
-    background-color: #fff;    
-   
+    background-color: #fff;
+    
     .header_top_area {
 
         display: flex;
@@ -14,18 +14,16 @@ export const HeaderContainer = styled.header`
         padding: 0px 70px;
         position: relative;
 
-        @media (max-width: 930px) {
+        @media (max-width: 940px) {
             padding: 0px 20px;
         }
 
-      
-
         @media (max-width: 420px) {
-           padding: 0px 10px;
+            padding: 0px 10px;
+            
         }
 
         a{
-
             display: flex;
             height: 35px;
             align-items: center;
@@ -74,6 +72,12 @@ export const HeaderContainer = styled.header`
             @media (max-width: 420px) {
                 left: 10px;
             }
+
+            @media (max-width: 360px) {
+                width: 120px;
+                height: 130px;
+                
+            }
         }   
     }
 
@@ -81,21 +85,24 @@ export const HeaderContainer = styled.header`
 
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 10px;
             
         .user_area {
-
+            display: flex;
             border-right: 1px solid #AB0519;
             border-left: 1px solid #AB0519;
-            padding: 0px 20px;
-            margin-right: 20px;
+            gap: 10px;
+            padding: 0px 10px;
+
+            div {
+                font-size: 1rem;
+            }
 
             span {
                 color: #AB0519;
                 font-weight: bold;
                 font-size: 1rem;
-                padding: 0px 10px;
-                
+            
             }
 
             img {
@@ -111,22 +118,24 @@ export const HeaderContainer = styled.header`
             button {
                 font-size: 0.7rem;
                 width: 60px;
-                margin-left: 10px;
             }
 
-        
-            @media (max-width: 376px) {
-                padding: 0px 10px;
+            @media (max-width: 410px) {
+                div {
+                    dipslay: flex;
+                    flex-direction: column;
+                    font-size: 0.8rem;
+                }
             }
-
+            
         }
 
     
-        @media (max-width: 630px) {
+        @media (max-width: 655px) {
             gap: 0px;
         }
 
-        @media (max-width: 580px) {
+        @media (max-width: 630px) {
             flex-direction: column;
             justify-content: center;
             align-items: flex-end;
@@ -144,7 +153,7 @@ export const HeaderContainer = styled.header`
             
     }
 
-     .header_top_area_right .cart_area .cart_info {
+    .header_top_area_right .cart_area .cart_info {
     
         flex-direction: column;
         justify-content: center;
@@ -155,19 +164,17 @@ export const HeaderContainer = styled.header`
         }
 
         @media (max-width: 800px) {
-              height: 75px;
+            height: 75px;
         }
             
-        @media (max-width: 580px) {
+        @media (max-width: 630px) {
             height:auto;
         }
 
-     }
+    }
     
     .cart_icone {
-
-        margin-right: 20px;
-        margin-left: 20px;
+        margin-right: 10px;
         width: 45px;
         height: 40px;
         color: #AB0519;
@@ -175,8 +182,6 @@ export const HeaderContainer = styled.header`
 
         @media (max-width: 470px) {
             margin-right: 10px;
-            margin-left: 10px;
-          
         }
 
     }
@@ -189,7 +194,7 @@ export const HeaderContainer = styled.header`
             text-align: center;
             margin-bottom: 2px;
         }
-       
+    
     }
 
     .header_footer_area {
@@ -202,7 +207,7 @@ export const HeaderContainer = styled.header`
         height: 40px;
         background-color: #F3EED9;
         position: relative;
-   
+        
         .menu_icone {
             display: none;
             height: 30px;
@@ -224,14 +229,11 @@ export const HeaderContainer = styled.header`
         }
 
         @media (max-width: 420px) {
-
-           padding: 0px 10px;
-
+            padding: 0px 10px;
         }
-
     }
 
-       
+
 `
 export const Search_area = styled.div`
 
@@ -289,23 +291,17 @@ export const Search_area = styled.div`
         z-index: 2;
 
         .search_icone {
-
             height: 20px;
-
         }
 
     }
 
     @media (max-width: 420px) {
-
-      right: 45px;
-
+        right: 45px;
     }
 
     @media (max-width: 376px) {
-
-      width: 130px;
-      
+        width: 130px;
     }
 
   

@@ -4,8 +4,6 @@ export const MenuContainer = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
-  
-  
 
     ul {
         display: flex;
@@ -36,7 +34,11 @@ export const MenuContainer = styled.nav`
     li:nth-child(6) {
         background-color: #AB0519;
         color: #fff;
-       
+
+        &:hover {
+            background-color: #e90621;
+        }
+    
     }
 
 
@@ -46,7 +48,8 @@ export const MenuContainer = styled.nav`
     }
 
     .dropdown {
-        display:none;
+        display:block;
+        opacity: 0;
         position: absolute;
         top: 40px;
         left: 0;
@@ -54,10 +57,9 @@ export const MenuContainer = styled.nav`
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         height: 0;
         width: 150px;
-        trasition: all 0.5s ease;
-        z-index: 111;
+        transition: opacity 0.5s ease;
+        z-index: -1;
 
-       
         li {
             display: flex;
             justify-content: start;
@@ -70,22 +72,23 @@ export const MenuContainer = styled.nav`
         }
 
         li:hover {
-           background-color: #f8f8f8;
-           color: #AB0519;
+            background-color: #f8f8f8;
+            color: #AB0519;
         }
 
         
     }
 
     li:hover:nth-child(3) .dropdown {
-        display: block;
+        z-index: 111;
+        opacity: 1;
         height: auto;
         color: #000;
     }
 
 
     @media (max-width: 800px) {
-         
+    
         ul{
             height: calc(100vh - 120px);
             flex-direction: column;
@@ -101,7 +104,7 @@ export const MenuContainer = styled.nav`
             height: 40px;;
             width: 100%;
             justify-content: start;
-          
+        
         }
             
         li:nth-child(6) {
@@ -111,7 +114,6 @@ export const MenuContainer = styled.nav`
 
     }
 
-  
 
 `
 
