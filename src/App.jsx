@@ -1,12 +1,16 @@
 import React from "react";
 import "./index.css";
-import Home from "./pages/home/Home";
+import Header from "./components/header/Header";
+import Baseboard from "./components/footer/Baseboard";
+import { Rotas }from './Rotas.jsx';
 
 function App() {
   return (
-    <>
-      <Home  />
-    </>
+    <section style={{ overflowX: "hidden"}}>
+      <Header />
+      <Rotas/>
+      <Baseboard />
+    </section>
   );
 }
 

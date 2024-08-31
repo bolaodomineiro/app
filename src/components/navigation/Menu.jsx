@@ -2,6 +2,7 @@ import React from "react";
 import {MenuContainer } from "./MenuStyles";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 const Menu = ({ toggleMenu, setMenu }) => {
 
@@ -22,6 +23,14 @@ const Menu = ({ toggleMenu, setMenu }) => {
                 </li>
                 <li onClick={() => setMenu(!toggleMenu)}>Ofertas</li>
                 <li onClick={() => setMenu(!toggleMenu)}>Raspadinhas</li>
+                <li>
+                    Saiba Mais 
+                    <FontAwesomeIcon className="chevron_icone" icon={faChevronDown} />
+                    <ul className="dropdown">
+                        <Link className="link" to="/Rule"><li onClick={() => setMenu(!toggleMenu)}>Regulamento</li></Link>
+                        <Link className="link" to="/faq"><li onClick={() => setMenu(!toggleMenu)}>Perguntas Frequentes</li></Link>
+                    </ul>
+                </li>
                 <li onClick={() => setMenu(!toggleMenu)}>Bolões</li>
             </ul>
         </MenuContainer>

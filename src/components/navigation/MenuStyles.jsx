@@ -9,13 +9,18 @@ export const MenuContainer = styled.nav`
         display: flex;
         align-items: center;
         height: 40px;
+
+        .link {
+            text-decoration: none;
+            color: #000;
+        }
     }
 
     li {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0px 20px;
+        padding: 0px 15px 0px 15px;
         font-size: 1rem;
         font-weight: bold;
         cursor: pointer;
@@ -26,12 +31,14 @@ export const MenuContainer = styled.nav`
         text-align: left;
         trasition: all 0.3s ease;
 
+
+
         &:hover {
             color: #AB0519;
         }
     }
 
-    li:nth-child(6) {
+    li:nth-child(7) {
         background-color: #AB0519;
         color: #fff;
 
@@ -56,18 +63,19 @@ export const MenuContainer = styled.nav`
         background-color: #fff;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         height: 0;
-        width: 150px;
+        width: 160px;
         transition: opacity 0.5s ease;
         z-index: -1;
 
         li {
             display: flex;
             justify-content: start;
-            padding: 5px 0px 5px 20px;
+            padding: 10px  15px;
             trasition: all 0.3s ease;
             border-bottom: 1px solid transparent;
             font-weight: 500;
             width: 100%;
+            font-size: 0.8rem;
             
         }
 
@@ -79,7 +87,8 @@ export const MenuContainer = styled.nav`
         
     }
 
-    li:hover:nth-child(3) .dropdown {
+    li:hover:nth-child(3) .dropdown,
+    li:hover:nth-child(6) .dropdown {
         z-index: 111;
         opacity: 1;
         height: auto;
@@ -91,6 +100,7 @@ export const MenuContainer = styled.nav`
     
         ul{
             height: calc(100vh - 120px);
+            width: 160px;
             flex-direction: column;
             z-index: 99;
             position: absolute;
@@ -107,9 +117,8 @@ export const MenuContainer = styled.nav`
         
         }
             
-        li:nth-child(6) {
+        li:nth-child(7) {
             justify-content: center;
-        
         }
 
     }
