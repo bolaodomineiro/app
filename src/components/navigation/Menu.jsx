@@ -28,7 +28,7 @@ const Menu = ({ toggleMenu, setMenu }) => {
                     <FontAwesomeIcon className="chevron_icone" icon={faChevronDown} />
                     <ul className="dropdown">
                         <Link className="link" to="/Rule"><li onClick={() => setMenu(!toggleMenu)}>Regulamento</li></Link>
-                        <Link className="link" to="/faq"><li onClick={() => setMenu(!toggleMenu)}>Perguntas Frequentes</li></Link>
+                        <Link className="link" to="/FaqSection"><li onClick={() => setMenu(!toggleMenu)}>Perguntas Frequentes</li></Link>
                     </ul>
                 </li>
                 <li onClick={() => setMenu(!toggleMenu)}>Bolões</li>
