@@ -1,24 +1,36 @@
-import styled from "styled-components"; 
+import styled from "styled-components";
 
 
-export const ContainerFaq  = styled.section`
+export const ContainerFaq = styled.section`
     width: 90%;
+    margin-top: 10px;
 
     .faq_title{
         width: 100%;
         display: flex;
+        gap: 10px;
         align-items: center;
+        justify-content: space-between;
         font-weight: bold;
         font-size: 1rem;
         background-color: #AB0519;
-        padding: 10px ;
+        padding: 10px 15px ;
         color: #fff;
+        cursor: pointer;
+
+        .faq_icon {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 450px) {
+            font-size: 0.8rem;
+        }
     }
 
     .faq_description {
+        height:0;
         overflow: hidden;
-        height: ;
-        transition: all 0.5s;
+        transition: all 0.3s ease;
         background-color: #F3EED9;
 
         p {
@@ -26,6 +38,27 @@ export const ContainerFaq  = styled.section`
             padding: 10px;
             font-weight: bold;
         }
+    }
+
+    .active {
+        height: 50px;
+        
+        @media (max-width: 920px) {
+            height: 80px;
+        }
+
+        @media (max-width: 616px) {
+            height: 120px;
+        }
+
+        @media (max-width: 396px) {
+            height: 150px;
+        }
+
+        @media (max-width: 332px) {
+            height: 180px;
+        }
+
     }
 
 `

@@ -3,7 +3,9 @@ import react from "@vitejs/plugin-react";
 import viteImagemin from 'vite-plugin-imagemin'
 
 export default defineConfig({
-  
+  server: {
+    historyApiFallback: true,
+  },
   plugins: [
     react(),
     viteImagemin({
