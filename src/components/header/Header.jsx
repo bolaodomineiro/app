@@ -1,18 +1,21 @@
 import React, { useState, useRef } from 'react';
 import Logo from '../../assets/images/logotipo.png';
 import { HeaderContainer, Search_area } from './HeaderStyles';
+import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faCartShopping, faBars, faSquareXmark} from '@fortawesome/free-solid-svg-icons';
 import Menu from '../navigation/Menu';
 import Btn from '../button/Btn';
+import {useAuthContext} from "../../context/AuthContext"
 
 
 
 const Header = () => {
 
     const [menu, setMenu] = useState(true);
-    const [Authenticated, setAuthenticated] = useState(false);// trocar valor pelo token de autenticação
+
+    const { Authenticated } = useAuthContext();
 
     const headerRef = useRef(null);
 
@@ -47,12 +50,20 @@ const Header = () => {
                                 </div>
                             ):(
                                 <>
-                                    <a  href="#"
-                                        onClick={() => setAuthenticated(!Authenticated)}
+                                    <Link 
+                                        className='link'
+                                        to="/login"
+                                        onClick={() => setAuthenticated(!Authenticated)}    
                                     >
                                         Acessar conta
-                                    </a>
-                                    <a href="#">Registrar</a>
+                                    </Link>
+
+                                    <Link 
+                                        className='link' 
+                                        to="/register"
+                                    >
+                                        Registrar
+                                    </Link>
                                 </>
                             )
                         }

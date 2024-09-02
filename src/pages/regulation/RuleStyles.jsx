@@ -45,6 +45,10 @@ export const Container = styled.section`
             padding: 5px;
             margin-top: 20px;
         }
+
+        @media (max-width: 769px) {
+            width: 90%;
+        }
     }
 
     @keyframes fadeIn {

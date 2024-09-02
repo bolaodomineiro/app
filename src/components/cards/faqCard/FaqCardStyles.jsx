@@ -28,9 +28,9 @@ export const ContainerFaq = styled.section`
     }
 
     .faq_description {
-        height:0;
+        max-height:0;
         overflow: hidden;
-        transition: all 0.3s ease;
+        transition: all 0.5s ;
         background-color: #F3EED9;
 
         p {
@@ -41,23 +41,23 @@ export const ContainerFaq = styled.section`
     }
 
     .active {
-        height: 50px;
+        max-height: 500px;
         
-        @media (max-width: 920px) {
-            height: 80px;
-        }
+        // @media (max-width: 920px) {
+        //     height: 80px;
+        // }
 
-        @media (max-width: 616px) {
-            height: 120px;
-        }
+        // @media (max-width: 616px) {
+        //     height: 120px;
+        // }
 
-        @media (max-width: 396px) {
-            height: 150px;
-        }
+        // @media (max-width: 396px) {
+        //     height: 150px;
+        // }
 
-        @media (max-width: 332px) {
-            height: 180px;
-        }
+        // @media (max-width: 332px) {
+        //     height: 180px;
+        // }
 
     }
 

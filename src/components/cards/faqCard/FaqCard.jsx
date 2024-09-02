@@ -36,12 +36,12 @@ const FaqCard = () => {
         })
 
         if(faqId === index && isOpen) {
-            faq[index].classList.remove("active")
             setIsOpen(false)
             setFaqId(null)
+            faq[index].classList.remove("active")
         }else {
-            faq[index].classList.add("active")
             setIsOpen(true)
+            faq[index].classList.add("active")
         }
     
     }
