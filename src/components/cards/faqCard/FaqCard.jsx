@@ -24,26 +24,15 @@ const FaqCard = () => {
         }
     ]
 
-
     const [faqId, setFaqId] = useState(0)
-    const [isOpen, setIsOpen] = useState(true)
 
     const hendleFaq = (index) => {
-        setFaqId(index)
-        const faq = document.querySelectorAll(".faq_description") 
-        faq.forEach((faq) => {
-            faq.classList.remove("active")
-        })
-
-        if(faqId === index && isOpen) {
-            setIsOpen(false)
+        
+        if(faqId === index) {
             setFaqId(null)
-            faq[index].classList.remove("active")
         }else {
-            setIsOpen(true)
-            faq[index].classList.add("active")
+            setFaqId(index)
         }
-    
     }
 
     return (
@@ -71,3 +60,6 @@ const FaqCard = () => {
 }
 
 export default FaqCard;
+
+
+

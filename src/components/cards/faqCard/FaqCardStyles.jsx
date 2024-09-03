@@ -28,7 +28,7 @@ export const ContainerFaq = styled.section`
     }
 
     .faq_description {
-        max-height:0;
+        max-height:0 ;
         overflow: hidden;
         transition: all 0.5s ;
         background-color: #F3EED9;
@@ -39,26 +39,9 @@ export const ContainerFaq = styled.section`
             font-weight: bold;
         }
     }
-
-    .active {
-        max-height: 500px;
         
-        // @media (max-width: 920px) {
-        //     height: 80px;
-        // }
-
-        // @media (max-width: 616px) {
-        //     height: 120px;
-        // }
-
-        // @media (max-width: 396px) {
-        //     height: 150px;
-        // }
-
-        // @media (max-width: 332px) {
-        //     height: 180px;
-        // }
-
+    .active {
+        max-height: 400px;
     }
 
 `
