@@ -8,3 +8,13 @@
   text-decoration: none;
 }
 
+.button {
+  background-color: #AB0519;
+  border: none;
+  color: white !important;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

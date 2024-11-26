@@ -32,7 +32,7 @@ const Header = () => {
                     <div>
 
                         <Link
-                            className='link'
+                            className='link button'
                             to="https://painel.bolaodomineiro.com.br"
                         >
                             Entrar
