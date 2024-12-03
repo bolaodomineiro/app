@@ -1,7 +1,6 @@
 import { ContainerRegister } from "./RegisterStyles";
 import Btn from "../../components/button/Btn";
-import { Link } from "react-router-dom";
-import Google from "../../assets/images/google.png";
+import GoogleBtn from "../../components/button/GoogleBtn";
 import { useAuthContext } from "../../context/AuthContext"
 
 const Register = () => {
@@ -33,14 +32,10 @@ const Register = () => {
           <input id="password" type="password" placeholder="Repita a senha" />
         </div>
         <Btn
-          text="Entrar"
+          text="Criar Conta"
           onClick={() => hendleSetLimit()}
         />
-        <div className="forgot">
-          <Link className="forgot_link">Esqueceu sua senha?</Link>
-        </div>
-        <Link className="register_link" to="/register">Criar conta</Link>
-        <img src={Google} alt="Google" />
+        <GoogleBtn />
       </form>
 
     </ContainerRegister>

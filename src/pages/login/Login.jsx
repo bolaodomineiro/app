@@ -1,7 +1,7 @@
 import { ContainerLogin } from "./LoginStyles";
 import Btn from "../../components/button/Btn";
 import { Link } from "react-router-dom";
-import Google from "../../assets/images/google.png";
+import GoogleBtn from "../../components/button/GoogleBtn";
 import { useAuthContext } from "../../context/AuthContext"
 
 const Login = () => {
@@ -28,11 +28,11 @@ const Login = () => {
                     text="Entrar"
                     onClick={() => hendleSetLimit()}
                 />
+                <GoogleBtn />
                 <div className="forgot">
                     <Link className="forgot_link">Esqueceu sua senha?</Link>
                 </div>
                 <Link className="register_link" to="/register">Criar conta</Link>
-                <img src={Google} alt="Google" />
             </form>
 
         </ContainerLogin>

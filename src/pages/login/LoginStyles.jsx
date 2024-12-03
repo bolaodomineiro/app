@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 export const ContainerLogin = styled.section`
     width: 100%;
-    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 30px 10px;
     background-color: #fff;
 
     form {
@@ -23,7 +22,7 @@ export const ContainerLogin = styled.section`
 
         label {
             display:block;
-            font-weight: bold;
+            font-weight:600;
             font-size: 1.1rem;
             padding: 5px 0px;
             cursor: pointer;
@@ -94,21 +93,5 @@ export const ContainerLogin = styled.section`
             }
         }
 
-        img{
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-top: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            padding: 2px;
-
-
-            &:hover {
-                background-color: #fff;
-                color: #fff;
-                box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.5);
-            }
-        }
     }
 `

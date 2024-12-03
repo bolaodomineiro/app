@@ -23,7 +23,7 @@ export const HeaderContainer = styled.header`
             
         }
 
-        a{
+        .link{
             display: flex;
             height: 35px;
             align-items: center;
@@ -304,6 +304,5 @@ export const Search_area = styled.div`
         width: 130px;
     }
 
-  
 `
 

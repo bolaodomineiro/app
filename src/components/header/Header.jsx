@@ -22,7 +22,11 @@ const Header = () => {
     return (
         <HeaderContainer ref={headerRef}>
             <div className='header_top_area'>
-                <img className='logo' src={Logo} alt="logo" />
+                <Link  
+                    to="/"
+                > 
+                    <img className='logo' src={Logo} alt="logo" />
+                </Link>
                 <div className='header_top_area_right'>
 
                     <Search_area>

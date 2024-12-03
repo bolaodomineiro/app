@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 export const ContainerRegister = styled.section`
     width: 100%;
-    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 30px 10px;
     background-color: #fff;
 
     form {
@@ -16,14 +15,13 @@ export const ContainerRegister = styled.section`
         justify-content: center;
         gap: 10px;
         width: 300px;
-        height: 400px;
         border-radius: 15px;
         background-color: #F3EED9;
         padding: 20px;
 
         label {
             display:block;
-            font-weight: bold;
+            font-weight: 600;
             font-size: 1.1rem;
             padding: 5px 0px;
             cursor: pointer;
@@ -41,7 +39,7 @@ export const ContainerRegister = styled.section`
             border: none;
             font-size: 1rem;
             font-weight: bold;
-            box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
         }
 
         input::placeholder {
@@ -93,22 +91,6 @@ export const ContainerRegister = styled.section`
                 border: 1px solid #ab0519;
             }
         }
-
-        img{
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-top: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            padding: 2px;
-
-
-            &:hover {
-                background-color: #fff;
-                color: #fff;
-                box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.5);
-            }
-        }
+        
     }
 `
