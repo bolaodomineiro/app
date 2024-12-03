@@ -30,45 +30,36 @@ const Header = () => {
                         <FontAwesomeIcon className='search_icone' icon={faMagnifyingGlass} />
                     </Search_area>
                     <div>
-
-                        <Link
-                            className='link button'
-                            to="https://painel.bolaodomineiro.com.br"
-                        >
-                            Entrar
-                        </Link>
-
-
-                        {/* {Authenticated ? (
-                                <div className='user_area'>
-                                    <div> 
-                                        Bem vindo,  
-                                        <span className='userName'>
-                                            usuário
-                                        </span>
-                                    </div>
-                                    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
-                                    <Btn text={"Sair"} />
+                        {Authenticated ? (
+                            <div className='user_area'>
+                                <div>
+                                    Bem vindo,
+                                    <span className='userName'>
+                                        usuário
+                                    </span>
                                 </div>
-                            ):(
-                                <>
-                                    <Link 
-                                        className='link'
-                                        to="/login"
-                                        onClick={() => setAuthenticated(!Authenticated)}    
-                                    >
-                                        Acessar conta
-                                    </Link>
+                                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
+                                <Btn text={"Sair"} />
+                            </div>
+                        ) : (
+                            <>
+                                <Link
+                                    className='link'
+                                    to="/login"
+                                    onClick={() => setAuthenticated(!Authenticated)}
+                                >
+                                    Acessar conta
+                                </Link>
 
-                                    <Link 
-                                        className='link' 
-                                        to="/register"
-                                    >
-                                        Registrar
-                                    </Link>
-                                </>
-                            )
-                        } */}
+                                <Link
+                                    className='link'
+                                    to="/register"
+                                >
+                                    Registrar
+                                </Link>
+                            </>
+                        )
+                        }
                     </div>
 
                     <div className='cart_area' style={{ display: Authenticated ? "flex" : "none" }}>

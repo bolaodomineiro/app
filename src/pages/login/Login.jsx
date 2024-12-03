@@ -1,15 +1,15 @@
-import  { ContainerLogin } from "./LoginStyles";
+import { ContainerLogin } from "./LoginStyles";
 import Btn from "../../components/button/Btn";
 import { Link } from "react-router-dom";
 import Google from "../../assets/images/google.png";
-import {useAuthContext} from "../../context/AuthContext"
+import { useAuthContext } from "../../context/AuthContext"
 
 const Login = () => {
 
-    const {setAuthenticated } = useAuthContext();
+    const { setAuthenticated } = useAuthContext();
 
     const hendleSetLimit = () => {
-        event.preventDefault(); 
+        event.preventDefault();
         setAuthenticated(true)
     }
 
@@ -24,7 +24,7 @@ const Login = () => {
                     <label htmlFor="password">Senha</label>
                     <input id="password" type="password" placeholder="********" />
                 </div>
-                <Btn 
+                <Btn
                     text="Entrar"
                     onClick={() => hendleSetLimit()}
                 />
