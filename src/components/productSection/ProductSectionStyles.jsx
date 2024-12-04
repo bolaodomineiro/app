@@ -33,13 +33,13 @@ export const ProductSectionContainer = styled.section`
             font-weight: bold;
             font-size: 2.5rem;
 
-             @media (max-width: 1300px) {
+            @media (max-width: 1300px) {
                 font-size: 1.2rem;
-             }
+            }
 
-             @media (max-width: 400px) {
+            @media (max-width: 400px) {
                 font-size: 1.2rem;
-             }
+            }
         }
 
     }

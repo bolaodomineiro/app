@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const BaseboardContainer = styled.footer` 
     width: 100%;
-    heigth: 750px;
 
     .socialMediaContainer {
         display: flex;
@@ -78,10 +77,73 @@ export const BaseboardContainer = styled.footer`
     }
 
     .baseboarBoxInfor {
+        display: flex;
         width: 100%;
-        height: 350px;
         background-color: #AB0519;
         position: relative;
+        padding: 30px 20px;
+        gap: 30px;
+
+        @media (max-width: 760px) {
+            flex-direction: column-reverse;
+        }
+        
+        h3 {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #fff;
+            padding-bottom: 10px;
+        }
+
+        .baseboardMap {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            .baseboardLinks {
+                display: flex;
+                flex-direction: column;
+
+                .link {
+                    color : #fff;
+
+                    &:hover {
+                        color: #F3EED9;
+                    }
+
+                }
+
+            }
+        }
+
+        .sobre {
+            flex:1;
+            display: flex;
+            gap: 30px;
+
+            img {
+                width: 130px;
+                height: 110px;
+            }
+
+            p {
+                color: #fff;
+                font-size: 1rem;
+                max-width: 70%;
+
+                @media (max-width: 800px) {
+                    font-size: 0.9rem;
+                    min-width: 100%;
+                }
+            }
+
+            @media (max-width: 490px) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+
 
         .whats-btn {
             display: flex;
@@ -170,6 +232,18 @@ export const BaseboardContainer = styled.footer`
             z-index: 99;
         }
 
+    }
+
+    .baseboardCopy {
+        background-color: #000;
+        text-align: center;
+        font-size: 1rem;
+        color: #fff;
+        padding: 4px 10px;
+
+        @media (max-width: 500px) {
+            font-size: 0.8rem;
+        }
     }
 
 `  

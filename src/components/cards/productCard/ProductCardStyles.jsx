@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-    width: 380px;
+    width: 340px;
     border-radius: 25px;
     border: 1px solid #AB0519;
     overflow: hidden;
 
     img {
         width: 100%;
-        height: 180px;
+        height: 200px;
     }
 
     .headerText {
