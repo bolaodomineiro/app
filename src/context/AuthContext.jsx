@@ -1,18 +1,16 @@
-import React, { createContext, useContext, useState } from 'react'; // importando  o react context
+import React, { createContext, useContext, useState } from 'react';
 
-const AuthContext = createContext(); // criando o context
+const AuthContext = createContext();
 
-export const AuthProvider = ({ children }) => { // exportando a funçao que farar o provider , passando como paramentro children
-
-    const [Authenticated, setAuthenticated] = useState(false);// trocar valor pelo token de autenticação
-
+export const AuthProvider = ({ children }) => {
+    const [Authenticated, setAuthenticated] = useState(true);
 
     return ( // usando e retornando o Appcontext.provider e passando o children, passando valores como props  pelo value 
-    <AuthContext.Provider value={{
-        setAuthenticated,
-        Authenticated
-    }}>
-        {children}
+        <AuthContext.Provider value={{
+            setAuthenticated,
+            Authenticated
+        }}>
+            {children}
         </AuthContext.Provider>
     );
 };

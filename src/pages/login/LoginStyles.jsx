@@ -23,7 +23,7 @@ export const ContainerLogin = styled.section`
         label {
             display:block;
             font-weight:600;
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             padding: 5px 0px;
             cursor: pointer;
         }
@@ -32,7 +32,7 @@ export const ContainerLogin = styled.section`
             display: flex;  
             align-items: center;
             width: 250px;
-            height: 30px;
+            height: 35px;
             border-radius: 6px;
             padding-left: 10px;
             cursor: pointer;
@@ -40,7 +40,7 @@ export const ContainerLogin = styled.section`
             border: none;
             font-size: 1rem;
             font-weight: bold;
-            box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
         }
 
         input::placeholder {

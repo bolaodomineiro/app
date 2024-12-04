@@ -1,11 +1,11 @@
 import { Btn } from "./GoogleStylesBtn"
 import Google from "../../assets/images/google.png"
 
-const GoogleBtn = () => {
+const GoogleBtn = ({text}) => {
     return (
         <Btn>
             <img src={Google} alt="google logo" />
-            <p> Entrar com Google </p>
+            <p> {text}</p>
         </Btn>
     )
 }

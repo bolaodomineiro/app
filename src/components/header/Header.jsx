@@ -10,7 +10,7 @@ import { useAuthContext } from "../../context/AuthContext"
 
 const Header = () => {
     const [menu, setMenu] = useState(true);
-    const { Authenticated } = useAuthContext();
+    const { Authenticated} = useAuthContext();
     const headerRef = useRef(null);
     const handleClickOutside = (event) => {
         if (headerRef.current && !headerRef.current.contains(event.target)) {
@@ -50,7 +50,6 @@ const Header = () => {
                                 <Link
                                     className='link'
                                     to="/login"
-                                    onClick={() => setAuthenticated(!Authenticated)}
                                 >
                                     Acessar conta
                                 </Link>

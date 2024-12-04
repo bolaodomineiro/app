@@ -66,6 +66,7 @@ export const MenuContainer = styled.nav`
         width: 160px;
         transition: opacity 0.5s ease;
         z-index: -1;
+        overflow: hidden;
 
         li {
             display: flex;
@@ -89,7 +90,7 @@ export const MenuContainer = styled.nav`
 
     li:hover:nth-child(3) .dropdown,
     li:hover:nth-child(6) .dropdown {
-        z-index: 111;
+        z-index: 99;
         opacity: 1;
         height: auto;
         color: #000;

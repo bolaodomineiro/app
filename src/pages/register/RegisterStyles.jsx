@@ -5,7 +5,7 @@ export const ContainerRegister = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 10px;
+    padding: 20px 10px;
     background-color: #fff;
 
     form {
@@ -22,8 +22,8 @@ export const ContainerRegister = styled.section`
         label {
             display:block;
             font-weight: 600;
-            font-size: 1.1rem;
-            padding: 5px 0px;
+            font-size: 1.2rem;
+            padding:  0px 0px 5px;
             cursor: pointer;
         }
 
@@ -31,7 +31,7 @@ export const ContainerRegister = styled.section`
             display: flex;  
             align-items: center;
             width: 250px;
-            height: 30px;
+            height: 35px;
             border-radius: 6px;
             padding-left: 10px;
             cursor: pointer;
@@ -44,52 +44,14 @@ export const ContainerRegister = styled.section`
 
         input::placeholder {
             font-size: 1rem;
-            font-weight: bold;
+            font-weight: 500;
             
-        }
-
-        .forgot{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 250px;
-            height: 50px;
-            border-bottom: 2px solid #AB0519;
-            padding-bottom: 10px;
-
-            .forgot_link {
-                color: #000;
-                font-weight: bold;
-                font-size: 1rem;
-                text-decoration: none;
-                trasition: all 0.3s ease;
-
-                &:hover {
-                    color: #AB0519;
-                }
-            }
         }
 
         button {
             width: 250px;
             padding: 10px 0px;
             margin-top: 10px;
-        }
-
-        .register_link {
-            color: #000;
-            font-weight: bold;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            border: 1px solid #000;
-            border-radius: 20px;
-            padding: 10px 30px;
-            margin-top: 10px;
-
-            &:hover {
-                color: #AB0519;
-                border: 1px solid #ab0519;
-            }
         }
         
     }

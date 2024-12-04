@@ -18,17 +18,17 @@ const Login = () => {
             <form action="#">
                 <div>
                     <label htmlFor="email">E-mail</label>
-                    <input id="email" type="text" placeholder="bolao@gmail.com" />
+                    <input id="email" type="text" placeholder="Exemplo@gmail.com" />
                 </div>
                 <div>
                     <label htmlFor="password">Senha</label>
-                    <input id="password" type="password" placeholder="********" />
+                    <input id="password" type="password" placeholder="Insira sua senha" />
                 </div>
                 <Btn
                     text="Entrar"
                     onClick={() => hendleSetLimit()}
                 />
-                <GoogleBtn />
+                <GoogleBtn text="Entrar com Google" />
                 <div className="forgot">
                     <Link className="forgot_link">Esqueceu sua senha?</Link>
                 </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { CardContainer } from "./ProductCardStyles";
 import Count from "../../count/Count";
 import Btn from "../../button/Btn";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ image, data, title, description, cotas, price }) => {
 
@@ -21,7 +22,7 @@ const ProductCard = ({ image, data, title, description, cotas, price }) => {
                 <p>{description}</p>
             </div>
             <div className="mainText">
-                <a href="#">Ver Jogos</a>
+                <Link className="link" to="/">Ver Jogos</Link>
                 <p>{cotas} cotas</p>
                 <p className="priceText">
                     <span>R$ {price.toFixed(2)} por cota</span>

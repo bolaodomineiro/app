@@ -301,7 +301,11 @@ export const Search_area = styled.div`
     }
 
     @media (max-width: 376px) {
-        width: 130px;
+        width: 170px;
+    }
+
+    @media (max-width: 325px) {
+        width: 140px;
     }
 
 `

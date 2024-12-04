@@ -4,27 +4,14 @@ import ProductCard from "../cards/productCard/ProductCard";
 import Btn from "../button/Btn";
 
 import React, { useState, useEffect } from 'react';
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-
-const firebaseConfig = {
-    apiKey: "AIzaSyAxejO0T_asVRfIETOB8FIK8HJ1J09jCDc",
-    authDomain: "bolaomineiro-bd92d.firebaseapp.com",
-    projectId: "bolaomineiro-bd92d",
-    storageBucket: "bolaomineiro-bd92d.firebasestorage.app",
-    messagingSenderId: "216084526672",
-    appId: "1:216084526672:web:03c16ea415ae6bbea34355",
-    measurementId: "G-T62C0FZD7Q"
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+import { db } from '../../config/firebase.config.ts';
+import { collection, getDocs } from 'firebase/firestore';
 
 const ProductSection = () => {
     const [jogos, setJogos] = useState([]);
 
     async function getJogos() {
-        const jogosCollection = collection(db, 'jogos');
+        const jogosCollection = collection(db, "jogos");
         const jogosSnapshot = await getDocs(jogosCollection);
         const jogosList = jogosSnapshot.docs.map(doc => doc.data());
         setJogos(jogosList);

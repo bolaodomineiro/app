@@ -1,57 +1,43 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  width: 380px;
-  border-radius: 25px;
-  border: 1px solid #AB0519;
-  overflow: hidden;
+    width: 380px;
+    border-radius: 25px;
+    border: 1px solid #AB0519;
+    overflow: hidden;
 
-  img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px;
-  }
-
-  .headerText {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 10px 0px;
-
-        h3 {
-            color: #AB0519;
-            font-weight: bold;
-            font-size: 2rem;
-
-            @media (max-width: 878px) { 
-                font-size: 1.6rem;  
-            }
-
-            @media (max-width: 300px) {
-                font-size: 1.3rem;
-            }
-            
-        }
-
-           
-        
-
-        
-
-        p {
-            display: flex;
-            justify-content: center;
-            height: 50px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 1rem;
-        }
-
+    img {
+        width: 100%;
+        height: 180px;
     }
 
-   
+    .headerText {
+            padding: 5px 10px 0px;
+            text-align: center;
+
+            h3 {
+                color: #AB0519;
+                font-weight: bold;
+                font-size: 2rem;
+
+                @media (max-width: 878px) { 
+                    font-size: 1.6rem;  
+                }
+
+                @media (max-width: 300px) {
+                    font-size: 1.3rem;
+                }
+                
+            }
+
+            p {
+                padding: 10px 0px;
+                text-align: center;
+                font-weight: bold;
+                font-size: 1rem;
+            }
+
+        }
 
     .mainText {
         display: flex;
@@ -60,7 +46,7 @@ export const CardContainer = styled.div`
         align-items: center;
         padding: 10px 0px;
 
-        a {
+        .link {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -72,6 +58,12 @@ export const CardContainer = styled.div`
             border: 1px solid #AB0519;
             border-radius:30px;
             margin-bottom: 10px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: #AB0519;
+                color: #fff;
+            }
         }
 
         p {
@@ -127,10 +119,8 @@ export const CardContainer = styled.div`
     }
 
     @media (max-width: 878px) {
-       max-width: 300px;
+        max-width: 300px;
     }
-
-  
 
 
 `

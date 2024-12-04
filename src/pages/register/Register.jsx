@@ -35,7 +35,7 @@ const Register = () => {
           text="Criar Conta"
           onClick={() => hendleSetLimit()}
         />
-        <GoogleBtn />
+        <GoogleBtn text="Registrar com Google" />
       </form>
 
     </ContainerRegister>

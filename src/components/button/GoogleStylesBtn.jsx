@@ -4,7 +4,6 @@ export const Btn = styled.div`
     display: flex;
     width: 250px;
     height: 40px;
-    justify-content: center;
     gap: 10px;
     align-items: center;
     background-color: #fff;
@@ -18,6 +17,10 @@ export const Btn = styled.div`
     img {
         width: 40px;
         height: 40px;
+    }
+
+    p {
+        text-align: center;
     }
 
 
