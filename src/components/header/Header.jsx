@@ -7,10 +7,12 @@ import { faMagnifyingGlass, faCartShopping, faBars, faSquareXmark } from '@forta
 import Menu from '../navigation/Menu';
 import Btn from '../button/Btn';
 import { useAuthContext } from "../../context/AuthContext"
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
     const [menu, setMenu] = useState(true);
-    const { Authenticated} = useAuthContext();
+    const { Authenticated, setAuthenticated } = useAuthContext();
+    
     const headerRef = useRef(null);
     const handleClickOutside = (event) => {
         if (headerRef.current && !headerRef.current.contains(event.target)) {
@@ -18,6 +20,13 @@ const Header = () => {
         }
     };
     document.addEventListener('click', handleClickOutside);
+
+    const navigate = useNavigate();
+    const hendleSingOut = () => {
+        setAuthenticated(!Authenticated)
+        navigate('/')
+        localStorage.removeItem('token');
+    }
 
     return (
         <HeaderContainer ref={headerRef}>
@@ -43,7 +52,10 @@ const Header = () => {
                                     </span>
                                 </div>
                                 <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
-                                <Btn text={"Sair"} />
+                                <Btn 
+                                    text={"Sair"} 
+                                    onClick={() => hendleSingOut()}
+                                />
                             </div>
                         ) : (
                             <>

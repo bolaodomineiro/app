@@ -3,14 +3,18 @@ import Btn from "../../components/button/Btn";
 import { Link } from "react-router-dom";
 import GoogleBtn from "../../components/button/GoogleBtn";
 import { useAuthContext } from "../../context/AuthContext"
+import { useNavigate} from "react-router-dom";
 
 const Login = () => {
 
-    const { setAuthenticated } = useAuthContext();
+    const { setAuthenticated, Authenticated } = useAuthContext();
+    const navigate = useNavigate();
 
-    const hendleSetLimit = () => {
+    const hendleSubmit = () => {
         event.preventDefault();
-        setAuthenticated(true)
+        setAuthenticated(!Authenticated);
+        navigate('/')
+        localStorage.setItem('token', 'true');
     }
 
     return (
@@ -26,13 +30,17 @@ const Login = () => {
                 </div>
                 <Btn
                     text="Entrar"
-                    onClick={() => hendleSetLimit()}
+                    onClick={() => hendleSubmit()}
                 />
                 <GoogleBtn text="Entrar com Google" />
                 <div className="forgot">
                     <Link className="forgot_link">Esqueceu sua senha?</Link>
                 </div>
-                <Link className="register_link" to="/register">Criar conta</Link>
+                <Link 
+                    className="register_link" 
+                    to="/register">
+                        Criar conta
+                </Link>
             </form>
 
         </ContainerLogin>

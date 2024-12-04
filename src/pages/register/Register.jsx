@@ -2,14 +2,18 @@ import { ContainerRegister } from "./RegisterStyles";
 import Btn from "../../components/button/Btn";
 import GoogleBtn from "../../components/button/GoogleBtn";
 import { useAuthContext } from "../../context/AuthContext"
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
 
-  const { setAuthenticated } = useAuthContext();
+  const { setAuthenticated, Authenticated } = useAuthContext();
+  const navigate = useNavigate();
 
-  const hendleSetLimit = () => {
+  const hendleSubmit = () => {
     event.preventDefault();
-    setAuthenticated(true)
+    setAuthenticated(!Authenticated);
+    navigate('/');
+    localStorage.setItem('token', 'true');
   }
 
   return (
@@ -33,7 +37,7 @@ const Register = () => {
         </div>
         <Btn
           text="Criar Conta"
-          onClick={() => hendleSetLimit()}
+          onClick={() => hendleSubmit()}
         />
         <GoogleBtn text="Registrar com Google" />
       </form>
