@@ -7,6 +7,7 @@ export const ContainerRegister = styled.section`
     align-items: center;
     padding: 20px 10px;
     background-color: #fff;
+    margin-top: 150px;
 
     form {
         display: flex;

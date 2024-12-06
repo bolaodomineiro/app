@@ -7,6 +7,7 @@ export const ContainerLogin = styled.section`
     align-items: center;
     padding: 30px 10px;
     background-color: #fff;
+    margin-top: 155px;
 
     form {
         display: flex;

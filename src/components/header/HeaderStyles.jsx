@@ -18,7 +18,7 @@ export const HeaderContainer = styled.header`
         padding: 0px 70px;
         position: relative;
 
-        @media (max-width: 940px) {
+        @media (max-width: 980px) {
             padding: 0px 20px;
         }
 
@@ -69,7 +69,7 @@ export const HeaderContainer = styled.header`
             left: 70px;
             z-index: 3;
 
-            @media (max-width: 930px) {
+            @media (max-width: 980px) {
                 left: 20px;
             }
             
@@ -78,8 +78,9 @@ export const HeaderContainer = styled.header`
             }
 
             @media (max-width: 360px) {
-                width: 120px;
-                height: 130px;
+                width: 110px;
+                height: 110px;
+                top: 25px;
                 
             }
         }   
@@ -124,7 +125,7 @@ export const HeaderContainer = styled.header`
                 width: 60px;
             }
 
-            @media (max-width: 410px) {
+            @media (max-width: 500px) {
                 div {
                     dipslay: flex;
                     flex-direction: column;
@@ -222,11 +223,11 @@ export const HeaderContainer = styled.header`
     
         }
 
-        @media (max-width: 930px) {
+        @media (max-width: 980px) {
             padding: 0px 20px;
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 880px) {
             .menu_icone {
                 display:block;
             }
@@ -285,7 +286,7 @@ export const Search_area = styled.div`
         color: #000;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 880px) {
 
         height: 30px;
         justify-content: flex-end;
@@ -309,7 +310,7 @@ export const Search_area = styled.div`
     }
 
     @media (max-width: 325px) {
-        width: 140px;
+        width: 155px;
     }
 
 `

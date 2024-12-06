@@ -21,17 +21,14 @@ export const MenuContainer = styled.nav`
         justify-content: center;
         align-items: center;
         padding: 0px 15px 0px 15px;
-        font-size: 1rem;
         font-weight: bold;
         cursor: pointer;
         font-weight: bold;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         height: 100%;
         position: relative;
         text-align: left;
         trasition: all 0.3s ease;
-
-
 
         &:hover {
             color: #AB0519;
@@ -63,7 +60,7 @@ export const MenuContainer = styled.nav`
         background-color: #fff;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         height: 0;
-        width: 160px;
+        width: 200px;
         transition: opacity 0.5s ease;
         z-index: -1;
         overflow: hidden;
@@ -97,11 +94,11 @@ export const MenuContainer = styled.nav`
     }
 
 
-    @media (max-width: 800px) {
+    @media (max-width: 880px) {
     
         ul{
             height: calc(100vh - 120px);
-            width: 160px;
+            width: 200px;
             flex-direction: column;
             z-index: 99;
             position: absolute;
