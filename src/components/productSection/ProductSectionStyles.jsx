@@ -19,8 +19,12 @@ export const ProductSectionContainer = styled.section`
                 font-size: 2.2rem;
             }
 
+            @media (max-width: 600px) {
+                font-size: 1.8rem;
+            }
+
             @media (max-width: 470px) {
-                font-size: 1.7rem;
+                font-size: 1.4rem;
             }
 
             @media (max-width: 370px) {

@@ -37,6 +37,10 @@ export const CountContainer = styled.div`
         font-weight: bold;
         font-size: 1rem;
 
+        @media (max-width: 878px) {
+            width: 150px;
+        }
+
         @media (max-width: 690px) {
             width: 125px;
         }

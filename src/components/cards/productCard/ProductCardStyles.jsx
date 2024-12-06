@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-    width: 360px;
-    border-radius: 25px;
+    min-width: 300px;
+    border-radius: 16px;
     border: 1px solid #AB0519;
     overflow: hidden;
 
@@ -18,16 +18,11 @@ export const CardContainer = styled.div`
             h3 {
                 color: #AB0519;
                 font-weight: bold;
-                font-size: 2rem;
+                font-size: 1.6rem;
 
-                @media (max-width: 878px) { 
-                    font-size: 1.6rem;  
+                @media (max-width: 873px) { 
+                    font-size: 1.3rem;  
                 }
-
-                @media (max-width: 300px) {
-                    font-size: 1.3rem;
-                }
-                
             }
 
             p {
@@ -95,18 +90,15 @@ export const CardContainer = styled.div`
         padding: 20px 30px ;
         gap: 10px;
 
-        @media (max-width: 340px) {
+        @media (max-width: 878px) {
             flex-direction: column;
         }
     }
 
     .priceTotal {
-
         display: flex;
         justify-content: center;
         align-items: center;
-
-        
     }
 
     button {
@@ -118,9 +110,16 @@ export const CardContainer = styled.div`
         }
     }
 
-    @media (max-width: 878px) {
-        max-width: 300px;
+    @media (max-width: 873px) {
+        max-width: 260px;
     }
 
+    @media (max-width: 669px) {
+        min-width: 240px;
+    }
+
+    @media (max-width: 589px) {
+        min-width: 300px;
+    }
 
 `
