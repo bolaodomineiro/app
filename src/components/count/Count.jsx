@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { CountContainer } from "./CountStyles"
 
-const Count = ({handlePriceUp}) => {
+const Count = ({handlePriceUp, cotas}) => {
 
     const [count, setCount] = useState(1)
 
@@ -18,7 +18,7 @@ const Count = ({handlePriceUp}) => {
                 disabled 
             />
             <div className="btn-increase"
-                onClick={() => {setCount(count + 1); handlePriceUp(count + 1)}}
+                onClick={() => {setCount(cotas > count ? count + 1 : count); handlePriceUp(cotas > count ? count + 1 : count)}}
             >+</div>
         </CountContainer>
     )

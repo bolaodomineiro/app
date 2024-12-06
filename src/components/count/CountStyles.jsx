@@ -29,7 +29,7 @@ export const CountContainer = styled.div`
 
     .quantity {
         text-align: center;
-        width: 150px;
+        width: 210px;
         height: 40px;
         border-radius: 30px;
         border: 1px solid #AB0519;
@@ -43,7 +43,4 @@ export const CountContainer = styled.div`
 
     }
 
-    
-
-    
- `
+`

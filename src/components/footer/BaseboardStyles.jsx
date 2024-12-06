@@ -81,8 +81,7 @@ export const BaseboardContainer = styled.footer`
         width: 100%;
         background-color: #AB0519;
         position: relative;
-        padding: 30px 20px;
-        gap: 30px;
+        padding: 20px 20px;
 
         @media (max-width: 760px) {
             flex-direction: column-reverse;
@@ -92,13 +91,12 @@ export const BaseboardContainer = styled.footer`
             font-weight: 700;
             font-size: 1.3rem;
             color: #fff;
-            padding-bottom: 10px;
+            padding: 10px 0px;
         }
 
         .baseboardMap {
+            flex:1;
             display: flex;
-            align-items: center;
-            gap: 30px;
 
             .baseboardLinks {
                 display: flex;
@@ -106,6 +104,7 @@ export const BaseboardContainer = styled.footer`
 
                 .link {
                     color : #fff;
+                    line-height: 1.5rem;
 
                     &:hover {
                         color: #F3EED9;
@@ -119,27 +118,34 @@ export const BaseboardContainer = styled.footer`
         .sobre {
             flex:1;
             display: flex;
-            gap: 30px;
-
-            img {
-                width: 130px;
-                height: 110px;
-            }
+            padding-right: 40px;
+            gap: 40px;
 
             p {
                 color: #fff;
+                max-width: 80%;
                 font-size: 1rem;
-                max-width: 70%;
-
-                @media (max-width: 800px) {
-                    font-size: 0.9rem;
-                    min-width: 100%;
-                }
+                line-height: 1.5rem;
+                padding-bottom:20px;
             }
 
-            @media (max-width: 490px) {
-                flex-direction: column;
+        }
+
+        .contato {
+            flex:1;
+
+            p {
+                display: flex;
                 align-items: center;
+                color: #fff;
+                font-size: 1rem;
+                line-height: 2rem;
+                gap: 20px;
+
+                .icon {
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
 
@@ -155,7 +161,7 @@ export const BaseboardContainer = styled.footer`
             background-color: #00A884;
             position:fixed;
             right: 25px;
-            bottom: 10px;
+            bottom: 40px;
             z-index: 99;
             border-radius: 50%;
             cursor: pointer;
@@ -176,7 +182,7 @@ export const BaseboardContainer = styled.footer`
             padding: 5px 10px;
             background-color: #ededed;
             right: 100px;
-            bottom: 10px;
+            bottom: 40px;
             border-radius: 8px;
             color: #000;
             box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.3);
@@ -235,7 +241,7 @@ export const BaseboardContainer = styled.footer`
     }
 
     .baseboardCopy {
-        background-color: #000;
+        background-color: #4a0911;
         text-align: center;
         font-size: 1rem;
         color: #fff;

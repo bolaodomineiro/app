@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-    width: 340px;
+    width: 360px;
     border-radius: 25px;
     border: 1px solid #AB0519;
     overflow: hidden;
@@ -90,9 +90,9 @@ export const CardContainer = styled.div`
 
     .footerText {
         display: flex;
-        justify-content:center;
+        justify-content:space-between;
         align-items: center;
-        padding: 20px 15px ;
+        padding: 20px 30px ;
         gap: 10px;
 
         @media (max-width: 340px) {

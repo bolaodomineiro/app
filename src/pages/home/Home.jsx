@@ -7,7 +7,7 @@ import Section from '../../components/section/Section';
 
 const Home = () => {
     return (
-        <section style={{ minHeight:"130svh" }}>
+        <section style={{ minHeight:"130svh", marginTop:"145px" }}>
             <Slider />
             <ProductSection />
             <ResultSection />

@@ -11,6 +11,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules';// import requ
 import Slid01 from  '../../assets/images/slide01.png';
 import Card from "../cards/CardBenerfit/Card";
 
+
 const Slider = () => {
 
     const banners = [
@@ -22,41 +23,41 @@ const Slider = () => {
     ];
 
 
-  return (
-    <>
-        <SliderShow>
-            <Swiper
-                slidesPerView={1}
-                spaceBetween={30}
-                centeredSlides={true}
-                autoplay={{
-                    delay: 3500,
-                    disableOnInteraction: false,
-                }}
-                loop={true}
-                pagination={{
-                    clickable: true,
-                }}
-                navigation={true}
-                modules={[Pagination, Navigation, Autoplay]}
-                className="mySwiper"
-            >
-                {banners.map((banner, index) => (
-                    <SwiperSlide key={index} className="slide">
-                        <img src={banner} alt="banner" />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-        </SliderShow>
-        <BenefitsOverview>
-            <div className="benefits">
-                <Card icone={<FontAwesomeIcon className="benefits_icone" icon={faAward} />} text={"Prêmios Maiores"} />
-                <Card icone={<FontAwesomeIcon className="benefits_icone" icon={faDollarSign} />} text={"Dinheiro na Conta"} />
-                <Card icone={<FontAwesomeIcon className="benefits_icone" icon={faLock} />} text={"Segurança Máxima"} />
-            </div>
-        </BenefitsOverview>
-    </>
-  );
+    return (
+        <>
+            <SliderShow>
+                <Swiper
+                    slidesPerView={1}
+                    spaceBetween={30}
+                    centeredSlides={true}
+                    autoplay={{
+                        delay: 4500,
+                        disableOnInteraction: false,
+                    }}
+                    loop={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Pagination, Navigation, Autoplay]}
+                    className="mySwiper"
+                >
+                    {banners.map((banner, index) => (
+                        <SwiperSlide key={index} className="slide">
+                            <img src={banner} alt="banner" />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </SliderShow>
+            <BenefitsOverview>
+                <div className="benefits">
+                    <Card icone={<FontAwesomeIcon className="benefits_icone" icon={faAward} />} text={"Prêmios Maiores"} />
+                    <Card icone={<FontAwesomeIcon className="benefits_icone" icon={faDollarSign} />} text={"Dinheiro na Conta"} />
+                    <Card icone={<FontAwesomeIcon className="benefits_icone" icon={faLock} />} text={"Segurança Máxima"} />
+                </div>
+            </BenefitsOverview>
+        </>
+    );
 }
 
 export default Slider;

@@ -8,7 +8,7 @@ export const Container = styled.section`
     align-items: center;
     padding: 50px 0px;
 
-    div h3 {
+    h3 {
         padding-bottom: 50px;
         font-size: 2.5rem;
         font-weight: bold;
@@ -16,6 +16,14 @@ export const Container = styled.section`
         opacity: 0;
         animation: textFadeIn 2s  ease forwards;
     }
+
+    h4 {
+        padding-bottom: 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+
 
     @keyframes textFadeIn {
         from {

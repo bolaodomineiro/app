@@ -29,7 +29,7 @@ const ProductCard = ({ image, data, title, description, cotas, price }) => {
                 </p>
             </div>
 
-            <Count handlePriceUp={handlePriceUp} />
+            <Count handlePriceUp={handlePriceUp} cotas={cotas} />
 
             <div className="footerText">
                 <p className="priceTotal">

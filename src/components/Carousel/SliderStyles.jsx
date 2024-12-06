@@ -17,6 +17,14 @@ export const SliderShow = styled.section`
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+
+            button {
+                position: absolute;
+                bottom: 45px;
+                width: 150px;
+                height: 40px;
+            }
         }
 
         .swiper-button-next,

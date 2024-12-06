@@ -4,6 +4,10 @@ export const HeaderContainer = styled.header`
 
     width: 100%;
     background-color: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
     
     .header_top_area {
 
