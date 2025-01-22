@@ -15,8 +15,7 @@ const PasswordRecovery = () => {
         const result = await verifyAndSendCode(email);
 
         if (result.success) {
-            alert(result.message);
-            setResultApi(true);
+            setResultApi(result.message);
         } else {
             alert(`error em enviar email de verificação`);
             setResultApi(result.message);

@@ -1,6 +1,5 @@
-
 import { initializeApp } from 'firebase/app';
-import { getAuth, sendSignInLinkToEmail, fetchSignInMethodsForEmail } from 'firebase/auth';
+import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 
     const firebaseConfig = {
         apiKey: "AIzaSyAxejO0T_asVRfIETOB8FIK8HJ1J09jCDc",
@@ -18,29 +17,9 @@ import { getAuth, sendSignInLinkToEmail, fetchSignInMethodsForEmail } from 'fire
 async function verifyAndSendCode(email) {
     try {
         // Verifica se o e-mail está registrado
-        const signInMethods = await fetchSignInMethodsForEmail(auth, email);
-        console.log("Métodos de login encontrados:", signInMethods);
+        const signInMethods = await sendPasswordResetEmail(auth, email);
+        return { success: true, message: "Email de verificação enviado com sucesso" };
     
-        if (signInMethods.length > 0) {
-        console.log("Email registrado. Enviando código.");
-    
-        // Configuração do link de autenticação por e-mail
-        const actionCodeSettings = {
-            url: `https://your-app-url.com/finishSignUp?email=${encodeURIComponent(email)}`,
-            handleCodeInApp: true,
-        };
-    
-        // Envia o link de autenticação por e-mail
-        await sendSignInLinkToEmail(auth, email, actionCodeSettings);
-        console.log("Código enviado para o e-mail:", email);
-        // Armazena o e-mail localmente para ser usado posteriormente
-        window.localStorage.setItem("emailForSignIn", email);
-        return { success: true, message: "Código enviado com sucesso." };
-
-        } else {
-            console.log("E-mail não registrado.");
-            return { success: false, message: "E-mail não registrado. Por favor, cadastre-se primeiro." };
-        }
     } catch (error) {
         console.error("Erro ao verificar ou enviar código:", error.message);
         return { success: false, message: error.message };
