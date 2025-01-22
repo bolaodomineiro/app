@@ -107,6 +107,7 @@ export const HeaderContainer = styled.header`
                 color: #AB0519;
                 font-weight: bold;
                 font-size: 1rem;
+                padding: 0px 5px;
             
             }
 

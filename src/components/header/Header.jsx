@@ -11,6 +11,11 @@ import { useAuthContext } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+
+    const getUseName = JSON.parse(localStorage.getItem("userName"));
+    const getUsePhoto = JSON.parse(localStorage.getItem("userPhoto"));
+    const getToken = localStorage.getItem("token");
+
     const [menu, setMenu] = useState(true);
     const { Authenticated } = useAuthContext();
 
@@ -34,13 +39,13 @@ const Header = () => {
                         <FontAwesomeIcon className="search_icone" icon={faMagnifyingGlass} />
                     </Search_area>
                     <div>
-                        {Authenticated ? (
+                        {Authenticated || getToken  ? (
                             <div className="user_area">
                                 <div>
-                                    Bem vindo,
-                                    <span className="userName">usuário</span>
+                                    Bem vindo, 
+                                    <span className="userName"> {getUseName ? getUseName : "usuário"}</span>
                                 </div>
-                                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" />
+                                {/* <img src={getUsePhoto ? getUsePhoto : "https://cdn-icons-png.flaticon.com/512/149/149071.png"} alt="" /> */}
                                 <LogoutBtn />
                             </div>
                         ) : (
@@ -55,7 +60,7 @@ const Header = () => {
                         )}
                     </div>
 
-                    <div className="cart_area" style={{ display: Authenticated ? "flex" : "none" }}>
+                    <div className="cart_area" style={{ display: Authenticated || getToken ? "flex" : "none" }}>
                         <FontAwesomeIcon className="cart_icone" icon={faCartShopping} />
                         <div className="cart_info">
                             <p>Saldo: R$ 0,00</p>

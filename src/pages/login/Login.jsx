@@ -41,7 +41,7 @@ const Login = () => {
                 </div>
                 <Btn text="Entrar" type="submit" />
                 <div className="forgot">
-                    <Link className="forgot_link">Esqueceu sua senha?</Link>
+                    <Link className="forgot_link" to="/passwordRecovery">Esqueceu sua senha?</Link>
                 </div>
                 <Link className="register_link" to="/register">
                     Criar conta

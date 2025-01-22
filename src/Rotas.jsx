@@ -4,12 +4,11 @@ import Rule from "./pages/regulation/Rule";
 import FaqSection from "./pages/faq/FaqSection.";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register"
-import NotFoundPage from "./pages/notFoundPage/NotFoundPage";
-import { useAuthContext } from "./context/AuthContext"
+import PasswordRecovery from "./pages/passwordRecovery/PasswordRecovery";
 
 export const Rotas = () => {
 
-    const { Authenticated } = useAuthContext();
+    const getToken = localStorage.getItem("token");
 
     return (
         <>
@@ -17,9 +16,10 @@ export const Rotas = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/Rule" element={<Rule />} />
                 <Route path="/FaqSection" element={<FaqSection />} />
-                { !Authenticated && <Route path="/Login" element={<Login />} /> }
-                { !Authenticated && <Route path="/Register" element={<Register />} />}
-                <Route path="*" element={<NotFoundPage/>} />
+                { !getToken ? <Route path="/Login" element={<Login />} />  : <Route path="/Login" element={<Home />} />}
+                { !getToken ? <Route path="/Register" element={<Register />} /> : <Route path="/Register" element={<Home />} />}
+                { !getToken ? <Route path="/passwordRecovery" element={<PasswordRecovery />} /> : <Route path="/PasswordRecovery" element={<Home />} />}
+                {/* <Route path="*" element={<NotFoundPage/>} /> */}
             </Routes>
         </>
     )

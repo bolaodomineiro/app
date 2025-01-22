@@ -1,5 +1,6 @@
 // src/components/button/LogoutBtn.jsx
 import React from "react";
+import  { Button } from "./logoutStyles";
 import { useAuthContext } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
@@ -13,9 +14,9 @@ const LogoutBtn = () => {
   };
 
   return (
-    <button onClick={handleLogout} className="logout-btn">
+    <Button onClick={handleLogout} >
       Sair
-    </button>
+    </Button>
   );
 };
 

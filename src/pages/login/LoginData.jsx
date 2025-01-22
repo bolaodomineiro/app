@@ -19,7 +19,10 @@ export async function signInUser(email, password) {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
 
-    console.log("Login realizado com sucesso:", user);
+    // console.log("Login realizado com sucesso:", user);
+
+    localStorage.setItem("userName", JSON.stringify(user.displayName));
+    localStorage.setItem("userPhoto", JSON.stringify(user.photoURL));
 
     return { success: true, user };
   } catch (error) {
