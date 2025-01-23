@@ -68,16 +68,17 @@ export const ContainerRecovery = styled.section`
         }
 
     }
+
 `
 
 export const ContainerResetPassword = styled.section`
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 10px;
     background-color: #fff;
-    margin-top: 150px;
 
     form {
         display: flex;
@@ -88,7 +89,7 @@ export const ContainerResetPassword = styled.section`
         width: 300px;
         border-radius: 15px;
         background-color: #F3EED9;
-        padding: 20px;
+        padding: 30px;
 
         h3 {
             font-size: 1.2rem;
@@ -99,7 +100,7 @@ export const ContainerResetPassword = styled.section`
         label {
         display:block;
         font-weight: 600;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         padding:  0px 0px 5px;
         cursor: pointer;
         }
@@ -120,7 +121,7 @@ export const ContainerResetPassword = styled.section`
         }
 
         input::placeholder {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 500;
         }
 
@@ -139,6 +140,18 @@ export const ContainerResetPassword = styled.section`
             font-weight: 600;
             font-size: 0.8rem;
             color: #000;
+        }
+
+        .password-container {
+            position: relative;
+            .eye-icon {
+                position: absolute;
+                font-size: 0.8rem;
+                top: 50%;
+                right: 10px;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }'
         }
 
     }
