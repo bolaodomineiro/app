@@ -36,6 +36,7 @@ const Register = () => {
   return (
     <ContainerRegister>
       <form id="registerForm" onSubmit={handleSubmit}>
+        <h3>Cadastro</h3>
         <div>
           <label>Nome Completo <span className="asterisk">*</span></label>
           <input id="name" name="name" type="text" placeholder="Nome e Sobrenome" required />

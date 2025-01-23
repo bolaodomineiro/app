@@ -35,14 +35,18 @@ export const MenuContainer = styled.nav`
         }
     }
 
-    li:nth-child(7) {
-        background-color: #AB0519;
-        color: #fff;
+    .link-bolao {
+        height: 100%;
 
-        &:hover {
-            background-color: #e90621;
+        li {
+            background-color: #AB0519;
+            color: #fff;
+            text-align: center;
+
+            &:hover {
+                background-color: #e90621;
+            } 
         }
-    
     }
 
 

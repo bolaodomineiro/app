@@ -1,11 +1,10 @@
-import React from "react";
 import {MenuContainer } from "./MenuStyles";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 
-const Menu = ({ toggleMenu, setMenu }) => {
-
+const Menu = ({ toggleMenu, setMenu, hendleScroll }) => {
+    
     return (
         <MenuContainer >
             <ul style={{ right: toggleMenu ? "-300px" : "0" }} >
@@ -31,7 +30,13 @@ const Menu = ({ toggleMenu, setMenu }) => {
                         <Link className="link" to="/FaqSection"><li onClick={() => setMenu(!toggleMenu)}>Perguntas Frequentes</li></Link>
                     </ul>
                 </li>
-                <li onClick={() => setMenu(!toggleMenu)}>Bolões</li>
+                <Link 
+                    to="/" 
+                    className="link-bolao" 
+                    onClick={(e) => { hendleScroll(450) }}
+                >
+                    <li > Bolões</li>
+                </Link>
             </ul>
         </MenuContainer>
     );

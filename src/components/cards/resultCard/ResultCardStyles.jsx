@@ -35,7 +35,10 @@ export const Container = styled.div`
             padding: 30px 0px;
 
             li {
-               word-spacing: 20px
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 60%;
             }
         }
 

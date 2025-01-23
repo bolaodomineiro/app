@@ -18,7 +18,7 @@ async function verifyAndSendCode(email) {
     try {
         // Verifica se o e-mail está registrado
         const signInMethods = await sendPasswordResetEmail(auth, email, { 
-            url: 'https://www.bolaodomineiro.com.br/ResetPassword', 
+            url: 'http://localhost:4000/passwordRecovery/ResetPassword', 
             handleCodeInApp: true,
         });
 
@@ -26,7 +26,7 @@ async function verifyAndSendCode(email) {
     
     } catch (error) {
         console.error("Erro ao verificar ou enviar código:", error.message);
-        return { success: false, message: error.message };
+        return { success: false, message: "Erro ao verificar ou enviar código:" };
     }
 }
 

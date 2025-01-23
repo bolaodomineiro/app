@@ -20,66 +20,74 @@ export const ContainerRegister = styled.section`
       background-color: #F3EED9;
       padding: 20px;
 
-    label {
-      display:block;
-      font-weight: 600;
-      font-size: 0.9rem;
-      padding:  0px 0px 5px;
-      cursor: pointer;
-    }
+      h3 {
+        font-size: 1.2rem;
+        padding-bottom: 4px;
+        border-bottom: 2px solid #AB0519;
+      }
 
-    input {
-      display: flex;  
-      align-items: center;
-      width: 250px;
-      height: 35px;
-      border-radius: 6px;
-      padding-left: 10px;
-      cursor: pointer;
-      color: #000;
-      border: none;
-      font-size: 0.9rem;
-      font-weight: bold;
-      box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
-      margin-bottom: 1rem;
-    }
+      label {
+        display:block;
+        font-weight: 600;
+        font-size: 0.8rem;
+        padding:  0px 0px 2px;
+        cursor: pointer;
+      }
 
-    input::placeholder {
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
+      input {
+        display: flex;  
+        align-items: center;
+        width: 250px;
+        height: 30px;
+        border-radius: 6px;
+        padding-left: 10px;
+        cursor: pointer;
+        color: #000;
+        border: none;
+        font-size: 0.8rem;
+        font-weight: bold;
+        box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+        
+      }
 
-    button {
-      width: 250px;
-      padding: 10px 0px;
-      margin-top: 20px;
-    }
+      input::placeholder {
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
 
-    .asterisk {
-      color:red;
-    }
+      button {
+        width: 250px;
+        padding: 10px 0px;
+        margin-top: 20px;
+      }
 
-    .terms-container {
-      display: flex;
-      align-items: center;
-      gap: 10px; /* Espaço entre o checkbox e o texto */
-    } 
+      
+      .asterisk {
+        color:red;
+      }
 
-    .checkbox {
-      width: 16px;
-      height: 16px;
-      cursor: pointer;
-    }
+      .terms-container {
+        display: flex;
+        width: 250px;
+        align-items: center;
+        gap: 10px; /* Espaço entre o checkbox e o texto */
+      } 
 
-    .terms-text {
-      font-size: 14px;
-      color: #333;
-      cursor: pointer;
-    }
+      .checkbox {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+      }
 
-    .boldtext {
-      font-weight: bold;
-    }
+      .terms-text {
+        font-size: 12px;
+        color: #333;
+        cursor: pointer;
+      }
+
+      .boldtext {
+        font-weight: bold;
+      }
         
   }
 `

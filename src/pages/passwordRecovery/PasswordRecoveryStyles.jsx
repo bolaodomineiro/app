@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ContainerRecovery = styled.section`
     width: 100%;
+    min-height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,6 +90,12 @@ export const ContainerResetPassword = styled.section`
         background-color: #F3EED9;
         padding: 20px;
 
+        h3 {
+            font-size: 1.2rem;
+            padding-bottom: 4px;
+            border-bottom: 2px solid #AB0519;
+        }
+
         label {
         display:block;
         font-weight: 600;
@@ -101,16 +108,15 @@ export const ContainerResetPassword = styled.section`
             display: flex;  
             align-items: center;
             width: 250px;
-            height: 35px;
+            height: 30px;
             border-radius: 6px;
             padding-left: 10px;
             cursor: pointer;
             color: #000;
             border: none;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: bold;
             box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
-            margin-bottom: 1rem;
         }
 
         input::placeholder {

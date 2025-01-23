@@ -27,6 +27,14 @@ const Header = () => {
     };
     document.addEventListener("click", handleClickOutside);
 
+    const hendleScroll = (number) => {
+        window.scrollTo({
+            top: number, // posição vertical
+            left: 0, // posição horizontal
+            behavior: 'smooth' // rolagem suave
+        });
+    }
+
     return (
         <HeaderContainer ref={headerRef}>
             <div className="header_top_area">
@@ -50,10 +58,14 @@ const Header = () => {
                             </div>
                         ) : (
                             <>
-                                <Link className="link" to="/login">
+                                <Link className="link" to="/login"
+                                    onClick={() => hendleScroll(0)}
+                                >
                                     Acessar conta
                                 </Link>
-                                <Link className="link" to="/register">
+                                <Link className="link" to="/register"
+                                    onClick={() => hendleScroll(0)}
+                                >
                                     Registrar
                                 </Link>
                             </>
@@ -70,7 +82,7 @@ const Header = () => {
                 </div>
             </div>
             <section className="header_footer_area">
-                <Menu toggleMenu={menu} setMenu={setMenu} />
+                <Menu toggleMenu={menu} setMenu={setMenu} hendleScroll={hendleScroll} />
 
                 {menu ? (
                     <FontAwesomeIcon className="menu_icone" icon={faBars} onClick={() => setMenu(!menu)} />

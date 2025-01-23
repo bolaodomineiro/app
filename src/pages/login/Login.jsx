@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ContainerLogin } from "./LoginStyles";
 import Btn from "../../components/button/Btn";
 import { Link } from "react-router-dom";
@@ -5,7 +6,11 @@ import { useAuthContext } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { signInUser } from "./LoginData";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+
 const Login = () => {
+    const [visibilePassword, setVisibilePassword] = useState(false);
     const { setAuthenticated, Authenticated } = useAuthContext();
     const navigate = useNavigate();
 
@@ -31,13 +36,29 @@ const Login = () => {
     return (
         <ContainerLogin>
             <form onSubmit={handleSubmit}>
+                <h3>Login</h3>
                 <div>
                     <label htmlFor="email">E-mail</label>
                     <input id="email" name="email" type="text" placeholder="Exemplo@gmail.com" required />
                 </div>
                 <div>
                     <label htmlFor="password">Senha</label>
-                    <input id="password" name="password" type="password" placeholder="Insira sua senha" required />
+                    <div className="password-container">
+                        <input id="password" name="password" type={visibilePassword ? "text" : "password"} placeholder="Insira sua senha" required />
+                        { visibilePassword ?
+                            <FontAwesomeIcon 
+                                icon={faEye} 
+                                className="eye-icon"
+                                onClick={() => setVisibilePassword(!visibilePassword)} 
+                            />
+                            :
+                            <FontAwesomeIcon 
+                                icon={faEyeSlash} 
+                                className="eye-icon" 
+                                onClick={() => setVisibilePassword(!visibilePassword)}
+                            /> 
+                        }
+                    </div>
                 </div>
                 <Btn text="Entrar" type="submit" />
                 <div className="forgot">
