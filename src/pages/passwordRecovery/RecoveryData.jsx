@@ -17,11 +17,12 @@ import { getAuth, sendPasswordResetEmail, confirmPasswordReset } from 'firebase/
 async function verifyAndSendCode(email) {
     try {
         // Verifica se o e-mail está registrado
-        const signInMethods = await sendPasswordResetEmail(auth, email, {
-            url: 'https://www.bolaodomineiro.com.br/ResetPasswor',
-            handleCodeInApp: true 
+        const signInMethods = await sendPasswordResetEmail(auth, email, { 
+            url: 'https://www.bolaodomineiro.com.br/ResetPassword', 
+            handleCodeInApp: true,
         });
-        return { success: true, message: "Email de verificação enviado com sucesso" };
+
+        return { success: true, message: "Email de  verificação enviado com sucesso" };
     
     } catch (error) {
         console.error("Erro ao verificar ou enviar código:", error.message);
@@ -29,16 +30,16 @@ async function verifyAndSendCode(email) {
     }
 }
 
-async function ResetPasswor(password , oobCode) {
+    
+async function ResetPasswor(password, oobCode) {
     try {
         // Confirma a redefinição de senha
-        await confirmPasswordReset(auth, oobCode, password);
-        alert("Senha redefinida com sucesso! Faça login com a nova senha.");
-        // Redireciona para a página de login ou home
-        window.location.href = "/login";
+        const signInMethods = await confirmPasswordReset(auth, oobCode, password);
+        return { success: true, message: "Senha redefinida com sucesso" };
     } catch (error) {
         console.error(error);
         alert("Ocorreu um erro ao redefinir a senha. Por favor, tente novamente.");
+        return { success: false, message: error.message };
     }
 }
     
