@@ -5,6 +5,7 @@ import FaqSection from "./pages/faq/FaqSection.";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register"
 import PasswordRecovery from "./pages/passwordRecovery/PasswordRecovery";
+import ResetPassword from "./pages/passwordRecovery/ResetPassword";
 
 export const Rotas = () => {
 
@@ -19,6 +20,7 @@ export const Rotas = () => {
                 { !getToken ? <Route path="/Login" element={<Login />} />  : <Route path="/Login" element={<Home />} />}
                 { !getToken ? <Route path="/Register" element={<Register />} /> : <Route path="/Register" element={<Home />} />}
                 { !getToken ? <Route path="/passwordRecovery" element={<PasswordRecovery />} /> : <Route path="/PasswordRecovery" element={<Home />} />}
+                { !getToken ? <Route path="/ResetPassword" element={<ResetPassword />} /> : <Route path="/ResetPassword" element={<Home />} />}
                 {/* <Route path="*" element={<NotFoundPage/>} /> */}
             </Routes>
         </>

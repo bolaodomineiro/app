@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
+import { getAuth, sendPasswordResetEmail, confirmPasswordReset } from 'firebase/auth';
 
     const firebaseConfig = {
         apiKey: "AIzaSyAxejO0T_asVRfIETOB8FIK8HJ1J09jCDc",
@@ -17,13 +17,29 @@ import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
 async function verifyAndSendCode(email) {
     try {
         // Verifica se o e-mail está registrado
-        const signInMethods = await sendPasswordResetEmail(auth, email);
+        const signInMethods = await sendPasswordResetEmail(auth, email, {
+            url: 'https://www.bolaodomineiro.com.br/ResetPasswor',
+            handleCodeInApp: true 
+        });
         return { success: true, message: "Email de verificação enviado com sucesso" };
     
     } catch (error) {
         console.error("Erro ao verificar ou enviar código:", error.message);
         return { success: false, message: error.message };
     }
+}
+
+async function ResetPasswor(password , oobCode) {
+    try {
+        // Confirma a redefinição de senha
+        await confirmPasswordReset(auth, oobCode, password);
+        alert("Senha redefinida com sucesso! Faça login com a nova senha.");
+        // Redireciona para a página de login ou home
+        window.location.href = "/login";
+    } catch (error) {
+        console.error(error);
+        alert("Ocorreu um erro ao redefinir a senha. Por favor, tente novamente.");
     }
+}
     
-    export { verifyAndSendCode };
+export { verifyAndSendCode, ResetPasswor };
