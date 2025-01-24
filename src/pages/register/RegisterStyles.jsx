@@ -88,6 +88,18 @@ export const ContainerRegister = styled.section`
       .boldtext {
         font-weight: bold;
       }
+
+      .password-container {
+        position: relative;
+        .eye-icon {
+          position: absolute;
+          font-size: 0.8rem;
+          top: 50%;
+          right: 10px;
+          transform: translateY(-50%);
+          cursor: pointer;
+        }
+    }
         
   }
 `

@@ -34,7 +34,8 @@ export async function registerUser(name, email, phone, city, password, code) {
 
     return { success: true };
   } catch (error) {
-    console.error("Erro ao cadastrar usuário:", error.message);
+    console.error("Ops! Email ja cadastrados:", error.message);
+    
     return { success: false, message: error.message };
   }
 }

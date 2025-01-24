@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useAuthContext } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { signInUser } from "./LoginData";
-
+// icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 

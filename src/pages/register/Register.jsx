@@ -4,11 +4,43 @@ import { useAuthContext } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { registerUser } from "./RegisterData"; // Importando a função de cadastro
 import { useState } from "react";
+// schemas
+import { registerSchema } from "../../schemas/fieldSchemas";
+
+// icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+
 
 const Register = () => {
   const { setAuthenticated, Authenticated } = useAuthContext();
   const navigate = useNavigate();
   const [statusMessage, setStatusMessage] = useState("");
+  const [phone, setPhone] = useState("");
+  const [visibilePassword, setVisibilePassword] = useState(false);
+
+  const handlePhoneChange = (event) => {
+    const { value } = event.target;
+    const formattedPhone = formatPhoneNumber(value);
+    setPhone(formattedPhone);
+  };
+
+function formatPhoneNumber(value) {
+  // Remove qualquer caractere não numérico
+  const cleanedValue = value.replace(/\D/g,'');
+  // Se o valor estiver vazio, retorne uma string vazia
+  if (cleanedValue.length === 0) {
+    return '';
+  }
+  // Verifica a quantidade de números e aplica a formatação
+  if (cleanedValue.length <= 2) {
+    return `(${cleanedValue}`;
+  } else if (cleanedValue.length <= 7) {
+    return `(${cleanedValue.slice(0, 2)})${cleanedValue.slice(2)}`;
+  } else {
+    return `(${cleanedValue.slice(0, 2)})${cleanedValue.slice(2, 7)}-${cleanedValue.slice(7, 11)}`;
+  }
+}
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -20,6 +52,14 @@ const Register = () => {
     const city = form.city.value;
     const password = form.password.value;
     const code = form.code.value;
+    const checkbox = form.checkbox.checked;
+
+    const validation = registerSchema.safeParse({ name, email, phone, city, password, code, checkbox });
+
+    if (!validation.success) {
+      alert(validation.success);
+      return;
+    }
 
     const result = await registerUser(name, email, phone, city, password, code);
 
@@ -29,7 +69,7 @@ const Register = () => {
       localStorage.setItem("token", "true");
       navigate("/");
     } else {
-      alert(`Erro ao cadastrar seu usuário: ${result.message}`);
+      alert(`Ops, Email  ja cadastrados!`);
     }
   };
 
@@ -49,7 +89,15 @@ const Register = () => {
 
         <div>
           <label>Celular / WhatsApp <span className="asterisk">*</span></label>
-          <input id="phone" name="phone" type="text" placeholder="(00) 0 0000-0000" required />
+          <input 
+              id="phone" 
+              name="phone" 
+              type="text" 
+              placeholder="(00) 0 0000-0000" 
+              required 
+              value={phone}
+              onChange={handlePhoneChange}
+            />
         </div>
 
         <div>
@@ -59,7 +107,28 @@ const Register = () => {
 
         <div>
           <label>Senha <span className="asterisk">*</span></label>
-          <input id="password" name="password" type="password" placeholder="Digite uma senha" required />
+          <div className="password-container">
+            <input 
+              id="password" 
+              name="password" 
+              type={visibilePassword ? "text" : "password"} 
+              placeholder="Digite uma senha" 
+              required 
+            />
+            { visibilePassword ?
+              <FontAwesomeIcon 
+                  icon={faEye} 
+                  className="eye-icon"
+                  onClick={() => setVisibilePassword(!visibilePassword)} 
+              />
+              :
+              <FontAwesomeIcon 
+                  icon={faEyeSlash} 
+                  className="eye-icon" 
+                  onClick={() => setVisibilePassword(!visibilePassword)}
+              /> 
+            }
+          </div>
         </div>
 
         <div>

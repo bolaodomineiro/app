@@ -34,11 +34,8 @@ export const Rotas = () => {
                     ? <Route path="/PasswordRecovery" element={<PasswordRecovery />} /> 
                     : <Route path="/PasswordRecovery" element={<Home />} />
                 }
-                {/* Caso deseje implementar uma página de erro no futuro */}
                 {/* <Route path="*" element={<NotFoundPage />} /> */}
             </Route>
-
-            {/* Rota independente para redefinir senha */}
             <Route path="/reset-password" element={<ResetPassword />} />
         </Routes>
         </>

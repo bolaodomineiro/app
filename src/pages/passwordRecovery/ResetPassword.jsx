@@ -1,11 +1,13 @@
 import  { ContainerResetPassword } from "./PasswordRecoveryStyles";
 import Btn from "../../components/button/Btn";
+// icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 import { useNavigate } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
 import { ResetPasswor } from "./RecoveryData";
+import { recoverySchema } from "../../schemas/fieldSchemas"
 
 const ResetPassword = () => {
     const navigate = useNavigate();
@@ -19,13 +21,20 @@ const ResetPassword = () => {
         const senha = form.senha.value.trim().toLowerCase();
         const senhaRepeat = form.senhaRepeat.value.trim().toLowerCase();
 
-        if (senha !== senhaRepeat) {
-            alert("As senhas digitadas são diferentes");
+        if (!oobCode) {
+            alert("Código de redefinição inválido ou ausente.");
             return;
         }
 
-        if (!oobCode) {
-            alert("Código de redefinição inválido ou ausente.");
+        const passwordValidation = recoverySchema.safeParse( senha ); 
+
+        if (!passwordValidation.success) {
+            alert(validation.error.issues[0].message);
+            return
+        } 
+
+        if (senha !== senhaRepeat) {
+            alert("As senhas digitadas são diferentes");
             return;
         }
 

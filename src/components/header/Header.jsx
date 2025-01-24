@@ -16,6 +16,8 @@ const Header = () => {
     const getUsePhoto = JSON.parse(localStorage.getItem("userPhoto"));
     const getToken = localStorage.getItem("token");
 
+    const lestName = getUseName ? getUseName.split(" ")[0] : "usuário";
+
     const [menu, setMenu] = useState(true);
     const { Authenticated } = useAuthContext();
 
@@ -51,7 +53,7 @@ const Header = () => {
                             <div className="user_area">
                                 <div>
                                     Bem vindo, 
-                                    <span className="userName"> {getUseName ? getUseName : "usuário"}</span>
+                                    <span className="userName">{lestName}</span>
                                 </div>
                                 {/* <img src={getUsePhoto ? getUsePhoto : "https://cdn-icons-png.flaticon.com/512/149/149071.png"} alt="" /> */}
                                 <LogoutBtn />
