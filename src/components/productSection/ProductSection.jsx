@@ -6,9 +6,11 @@ import Btn from "../button/Btn";
 import React, { useState, useEffect } from 'react';
 import { db } from '../../config/firebase.config.ts';
 import { collection, getDocs } from 'firebase/firestore';
+import { set } from "mongoose";
 
 const ProductSection = () => {
     const [jogos, setJogos] = useState([]);
+    const [limite, setLimite] = useState(6);
 
     async function getJogos() {
         const jogosCollection = collection(db, "jogos");
@@ -22,7 +24,11 @@ const ProductSection = () => {
     }, []);
 
     const handleSetLimit = () => {
-        console.log("Carregar mais jogos");
+        if (limite >= jogos.length) {
+            setLimite(jogos.length);
+            return
+        }
+        setLimite(limite + 3);
     };
 
     return (
@@ -36,7 +42,7 @@ const ProductSection = () => {
 
             <section className="productSection">
                 <div className="productCards">
-                    {jogos.map((jogo, index) => (
+                    {jogos.slice(0, limite).map((jogo, index) => (
                         <ProductCard
                             key={index}
                             data={jogo.data || 'Data do Sorteio'}
