@@ -6,7 +6,7 @@ import Btn from "../button/Btn";
 import React, { useState, useEffect } from 'react';
 import { db } from '../../config/firebase.config.ts';
 import { collection, getDocs } from 'firebase/firestore';
-import { set } from "mongoose";
+
 
 const ProductSection = () => {
     const [jogos, setJogos] = useState([]);

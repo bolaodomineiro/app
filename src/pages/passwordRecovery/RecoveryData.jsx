@@ -17,10 +17,7 @@ import { getAuth, sendPasswordResetEmail, confirmPasswordReset } from 'firebase/
 async function verifyAndSendCode(email) {
     try {
         // Verifica se o e-mail está registrado
-        const signInMethods = await sendPasswordResetEmail(auth, email, { 
-            url: 'http://localhost:4000/passwordRecovery/ResetPassword', 
-            handleCodeInApp: true,
-        });
+        const signInMethods = await sendPasswordResetEmail(auth, email);
 
         return { success: true, message: "Email de  verificação enviado com sucesso" };
     
