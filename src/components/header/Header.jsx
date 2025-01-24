@@ -13,8 +13,7 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
 
     const getUseName = JSON.parse(localStorage.getItem("userName"));
-    const getUsePhoto = JSON.parse(localStorage.getItem("userPhoto"));
-    const getToken = localStorage.getItem("token");
+    // const getUsePhoto = JSON.parse(localStorage.getItem("userPhoto"));
 
     const lestName = getUseName ? getUseName.split(" ")[0] : "usuário";
 
@@ -49,7 +48,7 @@ const Header = () => {
                         <FontAwesomeIcon className="search_icone" icon={faMagnifyingGlass} />
                     </Search_area>
                     <div>
-                        {Authenticated || getToken  ? (
+                        {Authenticated  ? (
                             <div className="user_area">
                                 <div>
                                     Bem vindo, 
@@ -74,7 +73,7 @@ const Header = () => {
                         )}
                     </div>
 
-                    <div className="cart_area" style={{ display: Authenticated || getToken ? "flex" : "none" }}>
+                    <div className="cart_area" style={{ display: Authenticated ? "flex" : "none" }}>
                         <FontAwesomeIcon className="cart_icone" icon={faCartShopping} />
                         <div className="cart_info">
                             <p>Saldo: R$ 0,00</p>

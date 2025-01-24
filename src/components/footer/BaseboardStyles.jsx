@@ -178,7 +178,7 @@ export const BaseboardContainer = styled.footer`
         .balloon {
             opacity: 0;
             position: fixed;
-            z-index: 99;
+            z-index: -1;
             padding: 5px 10px;
             background-color: #ededed;
             right: 100px;
@@ -186,7 +186,7 @@ export const BaseboardContainer = styled.footer`
             border-radius: 8px;
             color: #000;
             box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.3);
-            animation: animationOpacity 12s 5s ;
+            animation: animationOpacity 12s 5s  ;
             transition: opacity 0.5s ease;
 
             @keyframes animationOpacity {
@@ -233,7 +233,7 @@ export const BaseboardContainer = styled.footer`
 
         }
 
-        .whats-btn:hover + .balloon {
+        .whatsappLink:hover  .balloon {
             opacity: 1;
             z-index: 99;
         }

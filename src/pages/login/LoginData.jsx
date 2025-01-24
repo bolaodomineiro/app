@@ -18,6 +18,7 @@ const auth = getAuth(app);
 const firestore = getFirestore(app);
 
 export async function signInUser(email, password) {
+  
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;

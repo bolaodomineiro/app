@@ -106,7 +106,7 @@ const ResetPassword = () => {
                     </div>
                 </div>
                 <div>
-                    <Btn text="Alterar Senha" type="submit" />
+                    <Btn text="Atualizar Senha" type="submit" />
                 </div>
             </form>
         </ContainerResetPassword>

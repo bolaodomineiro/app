@@ -11,7 +11,7 @@ export const ResultContainer = styled.div`
 
         h3 {
             color: #AB0519;
-            font-size: 3rem;
+            font-size: 2rem;
 
             @media (max-width: 320px) {
                 font-size:2.2rem;
@@ -21,8 +21,6 @@ export const ResultContainer = styled.div`
         p {
             font-weight: bold;
             font-size: 1.8rem;
-
-          
         }
     }
 
@@ -43,6 +41,5 @@ export const ResultContainer = styled.div`
             width: 250px;
             height: 50px;
         }   
-     
     }
 `

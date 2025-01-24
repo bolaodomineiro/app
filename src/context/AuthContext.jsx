@@ -4,14 +4,16 @@ import { getAuth, signOut } from "firebase/auth";
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-    const [Authenticated, setAuthenticated] = useState(false);
+    const getAuthenticated = () => localStorage.getItem("authenticated");
+    const [Authenticated, setAuthenticated] = useState( getAuthenticated || false);
 
     const logout = async () => {
         const auth = getAuth();
         try {
             await signOut(auth);
             setAuthenticated(false);
-            localStorage.removeItem("token");
+            localStorage.clear();
+
             console.log("Usuário deslogado com sucesso.");
         } catch (error) {
             console.error("Erro ao deslogar:", error.message);

@@ -67,7 +67,7 @@ const Baseboard = () => {
                     </p>
                 </section>
 
-                <a href={`https://wa.me/<número_do_telefone>?text=Olá,%20sou%20${userName}%20e%20preciso%20de%20Suporte!`}>
+                <a className="whatsappLink" href={`https://wa.me/<número_do_telefone>?text=Olá,%20sou%20${userName}%20e%20preciso%20de%20Suporte!`}>
                     <div className="whats-btn">
                         <FontAwesomeIcon className="whatsappIcon" icon={faWhatsapp} />
                     </div>

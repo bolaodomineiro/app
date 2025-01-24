@@ -19,11 +19,7 @@ export const Rotas = () => {
                 <Route index={true} element={<Home />} />
                 <Route path="/Rule" element={<Rule />} />
                 <Route path="/FaqSection" element={<FaqSection />} />
-                { 
-                    !getToken 
-                    ? <Route path="/Login" element={<Login />} /> 
-                    : <Route path="/Login" element={<Home />} />
-                }
+                <Route path="/Login" element={<Login />} /> 
                 { 
                     !getToken 
                     ? <Route path="/Register" element={<Register />} /> 

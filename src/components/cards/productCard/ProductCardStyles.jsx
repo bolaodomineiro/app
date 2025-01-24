@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
+    width: 62vh;
     min-width: 300px;
     border-radius: 16px;
     border: 1px solid #AB0519;
@@ -111,15 +112,15 @@ export const CardContainer = styled.div`
     }
 
     @media (max-width: 873px) {
-        max-width: 260px;
+        // max-width: 260px;
     }
 
     @media (max-width: 669px) {
-        min-width: 240px;
-    }
+    //     min-width: 240px;
+    // }
 
     @media (max-width: 589px) {
-        min-width: 300px;
+        // min-width: 300px;
     }
 
 `

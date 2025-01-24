@@ -90,10 +90,11 @@ export const ContainerResetPassword = styled.section`
         border-radius: 15px;
         background-color: #F3EED9;
         padding: 30px;
+        box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.3);
 
         h3 {
-            font-size: 1.2rem;
-            padding-bottom: 4px;
+            font-size: 1rem;
+            padding-bottom: 2px;
             border-bottom: 2px solid #AB0519;
         }
 
@@ -129,6 +130,7 @@ export const ContainerResetPassword = styled.section`
             width: 250px;
             padding: 10px 0px;
             margin-top: 20px;
+            font-size: 0.8rem;
         }
 
         .asterisk {
