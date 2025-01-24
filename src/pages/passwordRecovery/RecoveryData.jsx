@@ -31,7 +31,7 @@ async function verifyAndSendCode(email) {
 }
 
     
-async function ResetPasswor(password, oobCode) {
+async function PasswordReset(password, oobCode) {
     try {
         // Confirma a redefinição de senha
         const signInMethods = await confirmPasswordReset(auth, oobCode, password);
@@ -43,4 +43,4 @@ async function ResetPasswor(password, oobCode) {
     }
 }
     
-export { verifyAndSendCode, ResetPasswor };
+export { verifyAndSendCode, PasswordReset };

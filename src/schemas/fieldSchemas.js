@@ -49,5 +49,6 @@ export const registerSchema = z.object({
 // schema de recuperação de senha
 export const recoverySchema = z.object({
     password: passwordSchema,
+    passwordRepeat: passwordSchema,
 });
 

@@ -7,7 +7,7 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 import { useNavigate } from "react-router-dom";
 import { useSearchParams } from "react-router-dom";
-import { ResetPasswor } from "./RecoveryData";
+import { PasswordReset } from "./RecoveryData";
 import { recoverySchema } from "../../schemas/fieldSchemas"
 
 const ResetPassword = () => {
@@ -22,27 +22,27 @@ const ResetPassword = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         const form = event.target;
-        const senha = form.senha.value.trim().toLowerCase();
-        const senhaRepeat = form.senhaRepeat.value.trim().toLowerCase();
+        const password = form.senha.value.trim();
+        const passwordRepeat = form.senhaRepeat.value.trim();
 
         if (!oobCode) {
             alert("Código de redefinição inválido ou ausente.");
             return;
         }
 
-        const passwordValidation = recoverySchema.safeParse( senha ); 
+        const passwordValidation =  recoverySchema.safeParse( password, passwordRepeat ); 
 
         if (!passwordValidation.success) {
-            alert(validation.error.issues[0].message);
+            alert(passwordValidation.error.issues[0].message);
             return
         } 
 
-        if (senha !== senhaRepeat) {
+        if (password !== passwordRepeat) {
             alert("As senhas digitadas são diferentes");
             return;
         }
 
-        const result = await ResetPasswor(senha, oobCode);
+        const result = await PasswordReset(password, oobCode);
 
         if (result.success) {
             alert("Senha redefinida com sucesso! Faça login com a nova senha.");
