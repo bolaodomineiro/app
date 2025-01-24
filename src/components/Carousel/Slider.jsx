@@ -9,6 +9,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';// import required modules
 import Slid01 from  '../../assets/images/slide01.png';
+import Slid02 from  '../../assets/images/slide02.png';
+import Slid03 from  '../../assets/images/slide03.png';
+import Slid04 from  '../../assets/images/slide04.png';
 import Card from "../cards/CardBenerfit/Card";
 
 
@@ -16,10 +19,9 @@ const Slider = () => {
 
     const banners = [
         Slid01,
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeOwaXxlV807hzXuHGueL-c9IlZmXu6Sba5Q&s",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTYveFwSYndoYRjsP7c-2X5gl1srgOxk42P9xyDpO0P_gTi1YoXs4NerTMvfXpG9AX-y4&usqp=CAU",
-        "https://jornalibia.com.br/wp-content/uploads/2017/02/loterias.jpg",
-        "https://www.agenciaminas.mg.gov.br/system/news/images/000/117/632/large/Loteria.png?1686327021"
+        Slid02,
+        Slid03,
+        Slid04,
     ];
 
 
