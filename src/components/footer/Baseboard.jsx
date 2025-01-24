@@ -2,19 +2,19 @@ import React from "react";
 import { BaseboardContainer } from "./BaseboardStyles";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faCirclePlay } from '@fortawesome/free-solid-svg-icons';
-import {faFacebook, faSquareInstagram, faWhatsapp} from '@fortawesome/free-brands-svg-icons';
+import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faSquareInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
 
 
 
 const Baseboard = () => {
-    
+
     const userName = localStorage.getItem('userName');
-    
+
     return (
-        <BaseboardContainer  className="baseboard">
+        <BaseboardContainer className="baseboard">
             <section className="socialMediaContainer">
                 <div className="socialMedias">
                     <p>Siga nossas Redes Sociais e fique por dentro!</p>
@@ -35,8 +35,7 @@ const Baseboard = () => {
                 <section className="baseboardMap">
                     <div className="baseboardLinks">
                         <h3>MAPA DO SITE</h3>
-                        <Link className="link" to="/"><p>Quina</p></Link>
-                        <Link className="link" to="/"><p>Mega Sena</p></Link>
+                        <Link className="link" to="/"><p>Concursos</p></Link>
                         <Link className="link" to="/"><p>Ofertas</p></Link>
                         <Link className="link" to="/"><p>Resultados</p></Link>
                         <Link className="link" to="/Rule"><p>Regulamento</p></Link>
@@ -47,7 +46,7 @@ const Baseboard = () => {
                 <section className="sobre">
                     <div>
                         <h3>SOBRE NÓS</h3>
-                        <p>Nossa empresa está no ramo de jogos de apostas desde o ano de 2019. Somos uma empresa séria e buscamos sempre trazer inovações para mudar o seu jeito de jogar, com isso, ampliamos ainda  mais as possibilidades de você ganhar!</p>
+                        <p>Nossa empresa está no ramo de jogos de apostas desde 2019. Somos uma empresa séria e buscamos sempre trazer inovações para mudar o seu jeito de jogar, com isso ampliamos ainda mais as possibilidades de você ganhar!</p>
                     </div>
                 </section>
 
@@ -55,11 +54,11 @@ const Baseboard = () => {
                     <h3>CONTATO</h3>
                     <p>
                         <FontAwesomeIcon className="icon" icon={faPhone} />
-                        (11) 99999-9999
+                        (35) 9 9231-5263
                     </p>
                     <p>
                         <FontAwesomeIcon className="icon" icon={faWhatsapp} />
-                        (11) 99999-9999
+                        (35) 9 9231-5263
                     </p>
                     <p>
                         <FontAwesomeIcon className="icon" icon={faEnvelope} />
@@ -67,7 +66,7 @@ const Baseboard = () => {
                     </p>
                 </section>
 
-                <a className="whatsappLink" href={`https://wa.me/<número_do_telefone>?text=Olá,%20sou%20${userName}%20e%20preciso%20de%20Suporte!`}>
+                <a className="whatsappLink" target="_blank" href={`https://wa.me/5535992315263?text=Olá!%20Preciso%20de%20Suporte!`}>
                     <div className="whats-btn">
                         <FontAwesomeIcon className="whatsappIcon" icon={faWhatsapp} />
                     </div>
@@ -79,7 +78,7 @@ const Baseboard = () => {
 
             </section>
             <div className="baseboardCopy">
-                <p>Copyright © 2024 Bolão do Mineiro. Todos os direitos reservados.</p>
+                <p>Copyright © 2025 Bolão do Mineiro. Todos os direitos reservados.</p>
             </div>
         </BaseboardContainer>
     )

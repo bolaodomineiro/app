@@ -1,17 +1,17 @@
 import React from "react";
 import { SliderShow, BenefitsOverview } from "./SliderStyles";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faLock, faAward,faDollarSign} from '@fortawesome/free-solid-svg-icons';
+import { faLock, faAward, faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import { Swiper, SwiperSlide } from 'swiper/react';// Import Swiper React components
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';// import required modules
-import Slid01 from  '../../assets/images/slide01.png';
-import Slid02 from  '../../assets/images/slide02.png';
-import Slid03 from  '../../assets/images/slide03.png';
-import Slid04 from  '../../assets/images/slide04.png';
+import Slid01 from '../../assets/images/slide01.png';
+import Slid02 from '../../assets/images/slide02.png';
+import Slid03 from '../../assets/images/slide03.png';
+import Slid04 from '../../assets/images/slide04.png';
 import Card from "../cards/CardBenerfit/Card";
 
 

@@ -86,7 +86,6 @@ export const BenefitsOverview = styled.section`
         align-items: center;
         height: 100%;
         width: calc(100% - 30%);
-        
         position: relative;
         top: -10px;
         z-index: 3;
@@ -108,6 +107,7 @@ export const BenefitsOverview = styled.section`
         padding: 0px;
     }
 
-    
-
+    .benefits_icone {
+      padding-right: 20px;
+    }
 `

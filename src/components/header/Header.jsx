@@ -48,13 +48,14 @@ const Header = () => {
                         <FontAwesomeIcon className="search_icone" icon={faMagnifyingGlass} />
                     </Search_area>
                     <div>
-                        {Authenticated  ? (
+                        {Authenticated ? (
                             <div className="user_area">
                                 <div>
-                                    Bem vindo, 
+                                    Bem vindo,
                                     <span className="userName">{lestName}</span>
                                 </div>
                                 {/* <img src={getUsePhoto ? getUsePhoto : "https://cdn-icons-png.flaticon.com/512/149/149071.png"} alt="" /> */}
+                                <a href="https://painel.bolaodomineiro.com.br" className="LogoutBtn" style={{ "font-weight": "bold", "color": "#AB0519" }}>| Entrar no Painel |</a>
                                 <LogoutBtn />
                             </div>
                         ) : (
