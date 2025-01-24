@@ -30,7 +30,7 @@ const ResetPassword = () => {
             return;
         }
 
-        const passwordValidation =  recoverySchema.safeParse( password, passwordRepeat ); 
+        const passwordValidation =  recoverySchema.safeParse({ password, passwordRepeat }); 
 
         if (!passwordValidation.success) {
             alert(passwordValidation.error.issues[0].message);
