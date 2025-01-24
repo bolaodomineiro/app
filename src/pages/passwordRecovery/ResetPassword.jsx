@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import  { ContainerResetPassword } from "./PasswordRecoveryStyles";
 import Btn from "../../components/button/Btn";
 // icons
@@ -10,8 +11,11 @@ import { ResetPasswor } from "./RecoveryData";
 import { recoverySchema } from "../../schemas/fieldSchemas"
 
 const ResetPassword = () => {
-    const navigate = useNavigate();
 
+    const [visibileNewPassword, setVisibileNewPassword] = useState(false);
+    const [visibileNewPasswordRepeat, setVisibileNewPasswordRepeat] = useState(false);
+
+    const navigate = useNavigate();
     const [searchParams] = useSearchParams();
     const oobCode = searchParams.get("oobCode");
 
@@ -58,20 +62,46 @@ const ResetPassword = () => {
                 <div>
                     <label>Nova Senha <span className="asterisk">*</span></label>
                     <div className="password-container">
-                        <input id="senha" name="senha" type="password" placeholder="Digite a nova senha" required />
-                        {true  ? 
-                            <FontAwesomeIcon icon={faEye} className="eye-icon" /> :
-                            <FontAwesomeIcon icon={faEyeSlash} className="eye-icon" />
+                        <input 
+                            id="senha" 
+                            name="senha" 
+                            type={visibileNewPassword ? 'text' : 'password'}
+                            placeholder="Digite a nova senha" 
+                            required 
+                        />
+                        {visibileNewPassword  ? 
+                            <FontAwesomeIcon 
+                                icon={faEye} 
+                                className="eye-icon"
+                                onClick={() => setVisibileNewPassword(!visibileNewPassword)} 
+                            /> :
+                            <FontAwesomeIcon 
+                                icon={faEyeSlash} 
+                                className="eye-icon"
+                                onClick={() => setVisibileNewPassword(!visibileNewPassword)} 
+                            />
                         }
                     </div>
                 </div>
                 <div>
                     <label>Repita a Senha <span className="asterisk">*</span></label>
                     <div className="password-container">
-                        <input id="senhaRepeat" name="senhaRepeat" type="password" placeholder="Digite a senha novamente" required />
-                        {true  ? 
-                            <FontAwesomeIcon icon={faEye} className="eye-icon" /> :
-                            <FontAwesomeIcon icon={faEyeSlash} className="eye-icon" />
+                        <input 
+                            id="senhaRepeat" 
+                            name="senhaRepeat" 
+                            type={visibileNewPasswordRepeat ? 'text' : 'password' }
+                            placeholder="Digite a senha novamente" 
+                            required 
+                        />
+                        {visibileNewPasswordRepeat ? 
+                            <FontAwesomeIcon icon={faEye} 
+                                className="eye-icon" 
+                                onClick={() => setVisibileNewPasswordRepeat(!visibileNewPasswordRepeat)} 
+                            /> :
+                            <FontAwesomeIcon icon={faEyeSlash} 
+                                className="eye-icon" 
+                                onClick={() => setVisibileNewPasswordRepeat(!visibileNewPasswordRepeat)} 
+                            />
                         }
                     </div>
                 </div>
