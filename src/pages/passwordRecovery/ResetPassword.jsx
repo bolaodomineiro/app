@@ -34,6 +34,8 @@ const ResetPassword = () => {
 
         if (!passwordValidation.success) {
             alert(passwordValidation.error.issues[0].message);
+            console.log(passwordValidation.error.issues[0].message);
+            console.log(passwordValidation.error.issues[0].message);
             return
         } 
 
