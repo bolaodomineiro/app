@@ -1,26 +1,29 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
+import { getAuth, signOut, setPersistence, browserLocalPersistence } from "firebase/auth";
 import { auth } from "../config/firebase.config";
-
 
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
     const getAuthenticated = () => localStorage.getItem("authenticated");
-    const [Authenticated, setAuthenticated] = useState(getAuthenticated);
+    const [Authenticated, setAuthenticated] = useState( getAuthenticated || false);
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            if (currentUser) {
-                setAuthenticated(currentUser); // Usuário autenticado
-            } else {
-                setAuthenticated(null); // Nenhum usuário logado
+        const configurePersistence = async () => {
+            try {
+                await setPersistence(auth, browserLocalPersistence);
+                console.log("Persistência configurada!");
+                await auth.setPersistence(browserLocalPersistence, {
+                    domain: ".bolaodomineiro.com.br/", // Domínio compartilhado entre os subdomínios
+                    secure: true,
+                });
+            } catch (error) {
+            console.error("Erro ao configurar persistência:", error);
             }
-        });
+        };
 
-        return () => unsubscribe(); // Limpa o listener ao desmontar o componente
-    }, []);
-
+        configurePersistence();
+    }, [auth]);
 
     const logout = async () => {
         const auth = getAuth();

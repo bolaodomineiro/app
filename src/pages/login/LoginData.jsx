@@ -1,4 +1,4 @@
-import { getAuth, signInWithEmailAndPassword, setPersistence, browserLocalPersistence } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { doc, getDoc } from 'firebase/firestore'; // Para acessar o Firestore
 import { getFirestore } from "firebase/firestore"; 
 import { initializeApp } from "firebase/app";
@@ -20,9 +20,6 @@ const firestore = getFirestore(app);
 export async function signInUser(email, password) {
   
   try {
-    
-    await setPersistence(auth, browserLocalPersistence); // Configurando o armazenamento local
-
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
 
