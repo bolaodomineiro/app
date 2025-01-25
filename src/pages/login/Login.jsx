@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ContainerLogin } from "./LoginStyles";
 import Btn from "../../components/button/Btn";
 import { Link } from "react-router-dom";
-import { useAuthContext } from "../../context/AuthContext";
+// import { useAuthContext } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import { signInUser } from "./LoginData";
 // icons
@@ -11,7 +11,7 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 const Login = () => {
     const [visibilePassword, setVisibilePassword] = useState(false);
-    const { setAuthenticated, Authenticated } = useAuthContext();
+    // const { setAuthenticated, Authenticated } = useAuthContext();
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
@@ -25,7 +25,7 @@ const Login = () => {
 
         if (result.success) {
             alert("Login realizado com sucesso!");
-            setAuthenticated(!Authenticated);
+            // setAuthenticated(!Authenticated);
             localStorage.setItem("token", "true");
             localStorage.setItem("authenticated", "true");
             navigate("/");
