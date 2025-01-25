@@ -55,7 +55,7 @@ const Header = () => {
                                     <span className="userName">{lestName}</span>
                                 </div>
                                 {/* <img src={getUsePhoto ? getUsePhoto : "https://cdn-icons-png.flaticon.com/512/149/149071.png"} alt="" /> */}
-                                <a href="https://painel.bolaodomineiro.com.br/painel" className="LogoutBtn" style={{ "font-weight": "bold", "color": "#AB0519" }}>| Entrar no Painel |</a>
+                                <a href="https://painel.bolaodomineiro.com.br/" className="LogoutBtn" style={{ "font-weight": "bold", "color": "#AB0519" }}>| Entrar no Painel |</a>
                                 <LogoutBtn />
                             </div>
                         ) : (
