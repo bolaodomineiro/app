@@ -27,7 +27,6 @@ const Login = () => {
         if (result.success) {
             alert("Login realizado com sucesso!");
             setAuthenticated(!Authenticated);
-            localStorage.setItem("token", "true");
             localStorage.setItem("authenticated", "true");
             navigate("/");
         } else {

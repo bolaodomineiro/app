@@ -2,6 +2,7 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { doc, getDoc } from 'firebase/firestore'; // Para acessar o Firestore
 import { getFirestore } from "firebase/firestore"; 
 import { initializeApp } from "firebase/app";
+import Cookies from "js-cookie";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAxejO0T_asVRfIETOB8FIK8HJ1J09jCDc",
@@ -23,6 +24,18 @@ export async function signInUser(email, password) {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
 
+    const idToken = await user.getIdToken();
+
+     // Configura o token em um cookie
+    Cookies.set("authToken", idToken, {
+      domain: ".bolaodomineiro.com.br", // Permite o compartilhamento entre domínios e subdomínios
+      secure: true, // Garante que o cookie seja enviado apenas em conexões HTTPS
+      sameSite: "None", // Permite o compartilhamento entre domínios
+      expires: 1, // Expira em 1 dia
+    });
+
+    localStorage.setItem("token", JSON.stringify(user.accessToken));
+
     // Buscando informações do usuário no Firestore pelo UID
     const userRef = doc(firestore, "users", user.uid); // Supondo que a coleção seja "users"
     const userDoc = await getDoc(userRef);
@@ -30,6 +43,20 @@ export async function signInUser(email, password) {
     if (userDoc.exists()) {
       // Se o documento existir, vamos pegar os dados do usuário
       const userData = userDoc.data();
+
+      // Configura outros dados em cookies, se necessário
+      Cookies.set("userName", userData.name, {
+        domain: ".bolaodomineiro.com.br",
+        secure: true,
+        sameSite: "None",
+        expires: 1,
+      });
+      Cookies.set("userId", user.uid, {
+        domain: ".bolaodomineiro.com.br",
+        secure: true,
+        sameSite: "None",
+        expires: 1,
+      });
 
       localStorage.setItem("userName", JSON.stringify(userData.name));
       // localStorage.setItem("userPhoto", JSON.stringify(userData.photo));
