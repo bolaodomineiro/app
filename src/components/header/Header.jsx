@@ -8,12 +8,13 @@ import Menu from "../navigation/Menu";
 import Btn from "../button/Btn";
 import LogoutBtn from "../button/logoutBtn";
 import { useAuthContext } from "../../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+
 
 const Header = () => {
 
     const getUseName = JSON.parse(localStorage.getItem("userName"));
     // const getUsePhoto = JSON.parse(localStorage.getItem("userPhoto"));
+    const getaccessToken = JSON.parse(localStorage.getItem("token"));
 
     const lestName = getUseName ? getUseName.split(" ")[0] : "usuário";
 
@@ -26,6 +27,7 @@ const Header = () => {
             setMenu(true);
         }
     };
+
     document.addEventListener("click", handleClickOutside);
 
     const hendleScroll = (number) => {
@@ -55,7 +57,12 @@ const Header = () => {
                                     <span className="userName">{lestName}</span>
                                 </div>
                                 {/* <img src={getUsePhoto ? getUsePhoto : "https://cdn-icons-png.flaticon.com/512/149/149071.png"} alt="" /> */}
-                                <a href="https://painel.bolaodomineiro.com.br" className="LogoutBtn" style={{ "font-weight": "bold", "color": "#AB0519" }}><Btn text="Panel" /></a>
+                                <a 
+                                    onClick={() =>  window.location.href=`http://painel.bolaodomineiro.com.br?${getaccessToken}`}
+                                    className="LogoutBtn" 
+                                >
+                                    <Btn text="Panel" />
+                                </a>
                                 <LogoutBtn />
                             </div>
                         ) : (

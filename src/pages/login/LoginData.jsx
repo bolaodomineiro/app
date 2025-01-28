@@ -2,7 +2,6 @@ import { setPersistence, browserLocalPersistence, getAuth, signInWithEmailAndPas
 import { doc, getDoc } from "firebase/firestore";
 import { getFirestore } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
-import Cookies from "js-cookie"; // Instale com `npm install js-cookie`
 
 const firebaseConfig = {
   apiKey: "AIzaSyAxejO0T_asVRfIETOB8FIK8HJ1J09jCDc",
@@ -30,12 +29,6 @@ export async function signInUser(email, password) {
     const token = user.accessToken;
 
     localStorage.setItem("token", JSON.stringify(token));
-    Cookies.set("token", token, {
-      domain: ".bolaomineiro.com.br", // Substitua pelo seu domínio principal
-      path: "/",
-      secure: true, // Somente para HTTPS
-      sameSite: "none", // Altere para "None" se precisar de compartilhamento cross-site (HTTPS obrigatório)
-    });
 
     // Buscando informações do usuário no Firestore pelo UID
     const userRef = doc(firestore, "users", user.uid); // Supondo que a coleção seja "users"
