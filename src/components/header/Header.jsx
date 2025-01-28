@@ -58,7 +58,7 @@ const Header = () => {
                                 </div>
                                 {/* <img src={getUsePhoto ? getUsePhoto : "https://cdn-icons-png.flaticon.com/512/149/149071.png"} alt="" /> */}
                                 <a 
-                                    onClick={() =>  window.location.href=`http://painel.bolaodomineiro.com.br?${getaccessToken}`}
+                                    onClick={() =>  window.location.href=`http://painel.bolaodomineiro.com.br/dashboard?${getaccessToken}`}
                                     className="LogoutBtn" 
                                 >
                                     <Btn text="Panel" />
