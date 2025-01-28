@@ -14,7 +14,7 @@ const Header = () => {
 
     const getUseName = JSON.parse(localStorage.getItem("userName"));
     // const getUsePhoto = JSON.parse(localStorage.getItem("userPhoto"));
-    const getaccessToken = JSON.parse(localStorage.getItem("token"));
+    const getaccessToken = localStorage.getItem("token");
 
     const lestName = getUseName ? getUseName.split(" ")[0] : "usuário";
 
@@ -58,7 +58,7 @@ const Header = () => {
                                 </div>
                                 {/* <img src={getUsePhoto ? getUsePhoto : "https://cdn-icons-png.flaticon.com/512/149/149071.png"} alt="" /> */}
                                 <a 
-                                    onClick={() =>  window.location.href=`http://painel.bolaodomineiro.com.br/dashboard?${getaccessToken}`}
+                                    onClick={() =>  window.location.href=`http://painel.bolaodomineiro.com.br/dashboard?token=${getaccessToken}`}
                                     className="LogoutBtn" 
                                 >
                                     <Btn text="Panel" />

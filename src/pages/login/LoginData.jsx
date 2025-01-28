@@ -28,7 +28,7 @@ export async function signInUser(email, password) {
     // Armazena o token no localStorage e também em um cookie compartilhado
     const token = user.accessToken;
 
-    localStorage.setItem("token", JSON.stringify(token));
+    localStorage.setItem("token", token);
 
     // Buscando informações do usuário no Firestore pelo UID
     const userRef = doc(firestore, "users", user.uid); // Supondo que a coleção seja "users"
