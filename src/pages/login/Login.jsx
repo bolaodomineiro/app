@@ -25,12 +25,12 @@ const Login = () => {
         const result = await signInUser(email, password);
 
         if (result.success) {
-            alert("Login realizado com sucesso!");
+            // alert("Login realizado com sucesso!");
             setAuthenticated(!Authenticated);
             localStorage.setItem("authenticated", "true");
             navigate("/");
         } else {
-            alert(`Erro ao realizar login: ${result.message}`);
+            // alert(`Erro ao realizar login: ${result.message}`);
         }
     };
 

@@ -77,7 +77,7 @@ const Header = () => {
                                     onClick={handleGoToPanel}
                                     className="LogoutBtn" 
                                 >
-                                    <Btn text="Panel" />
+                                    <Btn text="Painel" />
                                 </a>
                                 <LogoutBtn />
                             </div>
