@@ -8,18 +8,30 @@ import Menu from "../navigation/Menu";
 import Btn from "../button/Btn";
 import LogoutBtn from "../button/logoutBtn";
 import { useAuthContext } from "../../context/AuthContext";
-
+import CryptoJS from "crypto-js";
 
 const Header = () => {
+    // Chave de criptografia
+    const secretKey = "sua-chave-secreta"; // Guarde isso em uma variável de ambiente
 
     const getUseName = JSON.parse(localStorage.getItem("userName"));
-    // const getUsePhoto = JSON.parse(localStorage.getItem("userPhoto"));
     const getaccessToken = localStorage.getItem("token");
-
-    const lestName = getUseName ? getUseName.split(" ")[0] : "usuário";
+    const getUseId = JSON.parse(localStorage.getItem("userId"));
 
     const [menu, setMenu] = useState(true);
     const { Authenticated } = useAuthContext();
+    const lestName = getUseName ? getUseName.split(" ")[0] : "usuário";
+
+    // Função para criptografar o UID
+    function encryptUID(uid) {
+        return CryptoJS.AES.encrypt(uid, secretKey).toString();
+    }
+
+    // Função para redirecionar para o painel
+    const handleGoToPanel = () => {
+        const encryptedUID = encryptUID(getUseId);// criptografa o UID
+        window.location.href = `http://localhost:4001/dashboard?uid=${encodeURIComponent(encryptedUID)}`; // redireciona para o painel
+    };
 
     const headerRef = useRef(null);
     const handleClickOutside = (event) => {
@@ -27,7 +39,6 @@ const Header = () => {
             setMenu(true);
         }
     };
-
     document.addEventListener("click", handleClickOutside);
 
     const hendleScroll = (number) => {
@@ -50,7 +61,7 @@ const Header = () => {
                         <FontAwesomeIcon className="search_icone" icon={faMagnifyingGlass} />
                     </Search_area>
                     <div>
-                        {Authenticated ? (
+                        {Authenticated || getaccessToken ? (
                             <div className="user_area">
                                 <div>
                                     Bem vindo,
@@ -58,7 +69,7 @@ const Header = () => {
                                 </div>
                                 {/* <img src={getUsePhoto ? getUsePhoto : "https://cdn-icons-png.flaticon.com/512/149/149071.png"} alt="" /> */}
                                 <a 
-                                    onClick={() =>  window.location.href=`http://painel.bolaodomineiro.com.br/dashboard?token=${getaccessToken}`}
+                                    onClick={handleGoToPanel}
                                     className="LogoutBtn" 
                                 >
                                     <Btn text="Panel" />
@@ -81,7 +92,7 @@ const Header = () => {
                         )}
                     </div>
 
-                    <div className="cart_area" style={{ display: Authenticated ? "flex" : "none" }}>
+                    <div className="cart_area" style={{ display: Authenticated || getaccessToken ? "flex" : "none" }}>
                         <FontAwesomeIcon className="cart_icone" icon={faCartShopping} />
                         <div className="cart_info">
                             <p>Saldo: R$ 0,00</p>
