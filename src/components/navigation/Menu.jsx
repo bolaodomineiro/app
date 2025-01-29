@@ -2,26 +2,45 @@ import { MenuContainer } from "./MenuStyles";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
+//hooks
+import  useScroll  from "../../hooks/scroll";
 
-const Menu = ({ toggleMenu, setMenu, hendleScroll }) => {
+const Menu = ({ toggleMenu, setMenu}) => {
+
+    const { hendleScroll } = useScroll();
 
     return (
         <MenuContainer >
             <ul style={{ right: toggleMenu ? "-300px" : "0" }} >
-                <li onClick={() => setMenu(!toggleMenu)}>Concursos</li>
-
-                <li onClick={() => setMenu(!toggleMenu)}>Ofertas</li>
-
-                <Link className="link" to="/Rule"><li onClick={() => setMenu(!toggleMenu)}>Regulamento</li></Link>
-
-                <Link className="link" to="/FaqSection"><li onClick={() => setMenu(!toggleMenu)}>Perguntas Frequentes</li></Link>
-
+                <Link 
+                    className="link" 
+                    to="/">
+                    <li onClick={() => {setMenu(!toggleMenu),  hendleScroll(0) }}>Concursos</li>
+                </Link>
+                
+                <Link 
+                    className="link" 
+                    to="/">
+                <li onClick={() =>{ setMenu(!toggleMenu), hendleScroll(0)}}>Ofertas</li>
+                </Link>
+                
+                <Link 
+                    className="link" 
+                    to="/Rule">
+                    <li onClick={() => { setMenu(!toggleMenu),  hendleScroll(0) }}>Regulamento</li>
+                </Link>
+                
+                <Link 
+                    className="link" 
+                    to="/FaqSection"
+                >   <li onClick={() => { setMenu(!toggleMenu),  hendleScroll(0) }}>Perguntas Frequentes</li>
+                </Link>
+                
                 <Link
                     to="/"
                     className="link-bolao"
-                    onClick={(e) => { hendleScroll(450) }}
-                >
-                    <li > Bolões</li>
+                    onClick={() => { setMenu(!toggleMenu), hendleScroll(450) }}
+                >   <li > Bolões</li>
                 </Link>
             </ul>
         </MenuContainer>

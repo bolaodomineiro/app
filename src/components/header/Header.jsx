@@ -9,8 +9,13 @@ import Btn from "../button/Btn";
 import LogoutBtn from "../button/logoutBtn";
 import { useAuthContext } from "../../context/AuthContext";
 import CryptoJS from "crypto-js";
+// hook
+import  useScroll from "../../hooks/scroll";
 
 const Header = () => {
+
+    const { hendleScroll } = useScroll();
+
     // Chave de criptografia
     const secretKey = "sua-chave-secreta"; // Guarde isso em uma variável de ambiente
 
@@ -41,13 +46,13 @@ const Header = () => {
     };
     document.addEventListener("click", handleClickOutside);
 
-    const hendleScroll = (number) => {
-        window.scrollTo({
-            top: number, // posição vertical
-            left: 0, // posição horizontal
-            behavior: 'smooth' // rolagem suave
-        });
-    }
+    // const hendleScroll = (number) => {
+    //     window.scrollTo({
+    //         top: number, // posição vertical
+    //         left: 0, // posição horizontal
+    //         behavior: 'smooth' // rolagem suave
+    //     });
+    // }
 
     return (
         <HeaderContainer ref={headerRef}>
@@ -102,7 +107,7 @@ const Header = () => {
                 </div>
             </div>
             <section className="header_footer_area">
-                <Menu toggleMenu={menu} setMenu={setMenu} hendleScroll={hendleScroll} />
+                <Menu toggleMenu={menu} setMenu={setMenu} />
 
                 {menu ? (
                     <FontAwesomeIcon className="menu_icone" icon={faBars} onClick={() => setMenu(!menu)} />

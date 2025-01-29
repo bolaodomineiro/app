@@ -6,11 +6,14 @@ import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faSquareInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Link } from "react-router-dom";
+// hooks
+import  useScroll  from "../../hooks/scroll";
 
 
 
 const Baseboard = () => {
 
+    const { hendleScroll } = useScroll();
     const userName = localStorage.getItem('userName');
 
     return (
@@ -38,9 +41,20 @@ const Baseboard = () => {
                         <Link className="link" to="/"><p>Concursos</p></Link>
                         <Link className="link" to="/"><p>Ofertas</p></Link>
                         <Link className="link" to="/"><p>Resultados</p></Link>
-                        <Link className="link" to="/Rule"><p>Regulamento</p></Link>
-                        <Link className="link" to="/FaqSection"><p>Perguntas Frequentes</p></Link>
-                        <Link className="link" to="/"><p>Bolões</p></Link>
+                        <Link 
+                            className="link" 
+                            to="/Rule"><p onClick={() => hendleScroll(0)}>Regulamento</p>
+                        </Link>
+                        <Link 
+                            className="link" 
+                            to="/FaqSection">
+                                <p onClick={() => hendleScroll(0) }>Perguntas Frequentes</p>
+                        </Link>
+                        <Link 
+                            className="link" 
+                            to="/">
+                                <p onClick={() => hendleScroll(450) }>Bolões</p>
+                        </Link>
                     </div>
                 </section>
                 <section className="sobre">
