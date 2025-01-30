@@ -38,7 +38,7 @@ export async function signInUser(email, password) {
       // Se o documento existir, armazena as informações do usuário
       const userData = userDoc.data();
       localStorage.setItem("userName", JSON.stringify(userData.name));
-      localStorage.setItem("userId", JSON.stringify(user.uid));
+      localStorage.setItem("userId", user.uid);
       localStorage.setItem("balance", JSON.stringify(userData.balance));
       // Retorna os dados do usuário
       return { success: true, user, userData };
