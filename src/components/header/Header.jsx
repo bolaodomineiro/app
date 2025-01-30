@@ -22,7 +22,7 @@ const Header = () => {
     const getUseName = JSON.parse(localStorage.getItem("userName"));
     const getBalance = JSON.parse(localStorage.getItem("balance"));
     const getaccessToken = localStorage.getItem("token");
-    const getUseId = JSON.parse(localStorage.getItem("userId"));
+    const getUseId = localStorage.getItem("userId");
 
     const [menu, setMenu] = useState(true);
     const { Authenticated } = useAuthContext();
@@ -93,9 +93,8 @@ const Header = () => {
                     <div className="cart_area" style={{ display: Authenticated || getaccessToken ? "flex" : "none" }}>
                         <FontAwesomeIcon className="cart_icone" icon={faCartShopping} />
                         <div className="cart_info">
-                            <p>Saldo: R$ 
-                                <span style={{ color: getBalance >= 0 ? "green" : "red" }}>
-                                {(Number(getBalance) || " 0,00").toFixed(2)}</span></p>
+                            <p>Saldo: R$ <span style={{ color: getBalance >= 0 ? "green" : "red" }}> 
+                                { (Number( getBalance) || 0 ).toFixed(2)}</span></p>
                             <Btn text={"Adicionar saldo"} />
                         </div>
                     </div>
