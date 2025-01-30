@@ -33,11 +33,13 @@ export async function signInUser(email, password) {
     const userRef = doc(db, "users", user.uid);
     await setDoc(userRef, { token }, { merge: true }); // salva o token no Firestore no doc do user
     const userDoc = await getDoc(userRef); // busca o doc do user
+
     if (userDoc.exists()) {
       // Se o documento existir, armazena as informações do usuário
       const userData = userDoc.data();
       localStorage.setItem("userName", JSON.stringify(userData.name));
       localStorage.setItem("userId", JSON.stringify(user.uid));
+      localStorage.setItem("balance", JSON.stringify(userData.balance));
       // Retorna os dados do usuário
       return { success: true, user, userData };
     } else {

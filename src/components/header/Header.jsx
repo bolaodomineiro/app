@@ -20,6 +20,7 @@ const Header = () => {
     const secretKey = "sua-chave-secreta"; // Guarde isso em uma variável de ambiente
 
     const getUseName = JSON.parse(localStorage.getItem("userName"));
+    const getBalance = JSON.parse(localStorage.getItem("balance"));
     const getaccessToken = localStorage.getItem("token");
     const getUseId = JSON.parse(localStorage.getItem("userId"));
 
@@ -35,7 +36,7 @@ const Header = () => {
     // Função para redirecionar para o painel
     const handleGoToPanel = () => {
         const encryptedUID = encryptUID(getUseId);// criptografa o UID
-        window.location.href = `https://painel.bolaodomineiro.com.br/dashboard?uid=${encodeURIComponent(encryptedUID)}`; // redireciona para o painel
+        window.location.href = `http://painel.bolaodomineiro.com.br/dashboard?uid=${encodeURIComponent(encryptedUID)}`; // redireciona para o painel
     };
 
     const headerRef = useRef(null);
@@ -45,14 +46,6 @@ const Header = () => {
         }
     };
     document.addEventListener("click", handleClickOutside);
-
-    // const hendleScroll = (number) => {
-    //     window.scrollTo({
-    //         top: number, // posição vertical
-    //         left: 0, // posição horizontal
-    //         behavior: 'smooth' // rolagem suave
-    //     });
-    // }
 
     return (
         <HeaderContainer ref={headerRef}>
@@ -100,7 +93,9 @@ const Header = () => {
                     <div className="cart_area" style={{ display: Authenticated || getaccessToken ? "flex" : "none" }}>
                         <FontAwesomeIcon className="cart_icone" icon={faCartShopping} />
                         <div className="cart_info">
-                            <p>Saldo: R$ 0,00</p>
+                            <p>Saldo: R$ 
+                                <span style={{ color: getBalance >= 0 ? "green" : "red" }}>
+                                {(Number(getBalance) || " 0,00").toFixed(2)}</span></p>
                             <Btn text={"Adicionar saldo"} />
                         </div>
                     </div>

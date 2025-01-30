@@ -9,7 +9,6 @@ import ResetPassword from "./pages/passwordRecovery/ResetPassword";
 import Layout from "./pages/layout/Layout";
 
 export const Rotas = () => {
-    const getToken = localStorage.getItem("token");
 
     return (
         <>
@@ -20,16 +19,9 @@ export const Rotas = () => {
                 <Route path="/Rule" element={<Rule />} />
                 <Route path="/FaqSection" element={<FaqSection />} />
                 <Route path="/Login" element={<Login />} /> 
-                { 
-                    !getToken 
-                    ? <Route path="/Register" element={<Register />} /> 
-                    : <Route path="/Register" element={<Home />} />
-                }
-                { 
-                    !getToken 
-                    ? <Route path="/PasswordRecovery" element={<PasswordRecovery />} /> 
-                    : <Route path="/PasswordRecovery" element={<Home />} />
-                }
+                <Route path="/Register" element={<Register />} /> 
+                <Route path="/Register" element={<Home />} />
+                <Route path="/PasswordRecovery" element={<PasswordRecovery />} /> 
                 {/* <Route path="*" element={<NotFoundPage />} /> */}
             </Route>
             <Route path="/reset-password" element={<ResetPassword />} />

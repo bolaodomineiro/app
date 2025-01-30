@@ -13,7 +13,7 @@ export function AuthProvider({ children }) {
         try {
             await signOut(auth);
             setAuthenticated(false);
-            localStorage.removeItem("token");
+            // localStorage.removeItem("token");
             localStorage.clear();
             navigate("/login");
         } catch (error) {
@@ -37,9 +37,6 @@ export function AuthProvider({ children }) {
                     console.error(error.message);
                     logout();
                 }
-            } else {
-                alert("Erro. Por favor, tente autenticar novamente.");
-                setAuthenticated(false);
             }
         });
 
@@ -54,3 +51,4 @@ export function AuthProvider({ children }) {
 }
 
 export const useAuthContext = () => useContext(AuthContext);
+

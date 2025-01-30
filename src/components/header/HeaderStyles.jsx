@@ -164,6 +164,12 @@ export const HeaderContainer = styled.header`
         flex-direction: column;
         justify-content: center;
         height: 80px;
+        font-weight: bold;
+
+        p {
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
 
         button {
             font-size: 0.7rem;
