@@ -36,7 +36,7 @@ const Header = () => {
     // Função para redirecionar para o painel
     const handleGoToPanel = () => {
         const encryptedUID = encryptUID(getUseId);// criptografa o UID
-        window.location.href = `https://painel.bolaodomineiro.com.br/dashboard/jogo?uid=${encodeURIComponent(encryptedUID)}`; // redireciona para o painel
+        window.location.href = `http://localhost:4001/dashboard/jogo?uid=${encodeURIComponent(encryptedUID)}`; // redireciona para o painel
     };
 
     const headerRef = useRef(null);
