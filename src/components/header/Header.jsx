@@ -22,7 +22,6 @@ const Header = () => {
     const getUseName = JSON.parse(localStorage.getItem("userName"));
     const getBalance = JSON.parse(localStorage.getItem("balance"));
     const getaccessToken = localStorage.getItem("token");
-    const getUseId = localStorage.getItem("userId");
 
     const [menu, setMenu] = useState(true);
     const { Authenticated } = useAuthContext();
@@ -35,9 +34,11 @@ const Header = () => {
 
     // Função para redirecionar para o painel
     const handleGoToPanel = () => {
+        const getUseId =  localStorage.getItem("userId");
         const encryptedUID = encryptUID(getUseId);// criptografa o UID
+        console.log(encryptedUID);
         window.location.href = `https://painel.bolaodomineiro.com.br/dashboard/jogo?uid=${encodeURIComponent(encryptedUID)}`; // redireciona para o painel
-        // window.location.href = `http://localhost:4000/dashboard/jogo?uid=${encodeURIComponent(encryptedUID)}`; // redireciona para o painel
+        // window.location.href = `http://localhost:4001/dashboard/jogo?uid=${encodeURIComponent(encryptedUID)}`; // redireciona para o painel
     };
     
 
