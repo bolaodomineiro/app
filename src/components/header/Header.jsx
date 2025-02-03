@@ -41,7 +41,6 @@ const Header = () => {
         // window.location.href = `http://localhost:4001/dashboard/jogo?uid=${encodeURIComponent(encryptedUID)}`; // redireciona para o painel
     };
     
-git 
     const headerRef = useRef(null);
     const handleClickOutside = (event) => {
         if (headerRef.current && !headerRef.current.contains(event.target)) {
