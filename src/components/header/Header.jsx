@@ -19,13 +19,13 @@ const Header = () => {
     // Chave de criptografia
     const secretKey = "sua-chave-secreta"; // Guarde isso em uma variável de ambiente
 
-    const getUseName = localStorage.getItem("userName");
+    const getUseName = JSON.parse(localStorage.getItem("userName"));
     const getBalance = localStorage.getItem("balance");
     const getaccessToken = localStorage.getItem("token");
 
     const [menu, setMenu] = useState(true);
     const { Authenticated } = useAuthContext();
-    const lestName = getUseName ? getUseName.split(" ")[0] : "usuário";
+    const lestName = getUseName ? getUseName.split(" ")[0] : "Usuarário";
 
     // Função para criptografar o UID
     function encryptUID(uid) {
