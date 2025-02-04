@@ -19,8 +19,8 @@ const Header = () => {
     // Chave de criptografia
     const secretKey = "sua-chave-secreta"; // Guarde isso em uma variável de ambiente
 
-    const getUseName = JSON.parse(localStorage.getItem("userName"));
-    const getBalance = JSON.parse(localStorage.getItem("balance"));
+    const getUseName = localStorage.getItem("userName");
+    const getBalance = localStorage.getItem("balance");
     const getaccessToken = localStorage.getItem("token");
 
     const [menu, setMenu] = useState(true);
@@ -38,7 +38,7 @@ const Header = () => {
         const encryptedUID = encryptUID(getUseId);// criptografa o UID
         console.log(encryptedUID);
         window.location.href = `https://painel.bolaodomineiro.com.br/dashboard/jogo?uid=${encodeURIComponent(encryptedUID)}`; // redireciona para o painel
-        // window.location.href = `http://localhost:4001/dashboard/jogo?uid=${encodeURIComponent(encryptedUID)}`; // redireciona para o painel
+        // window.location.href = `http://localhost:4000/dashboard/jogo?uid=${encodeURIComponent(encryptedUID)}`; // redireciona para o painel
     };
     
     const headerRef = useRef(null);

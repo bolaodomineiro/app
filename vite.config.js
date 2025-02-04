@@ -8,9 +8,6 @@ export default defineConfig({
   plugins: [
     react(),
   ],
-  server: {
-    port: 3000, // Altere para a porta desejada
-  },
   esbuild: {
     loader: "jsx",
   },
