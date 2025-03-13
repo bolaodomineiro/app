@@ -16,7 +16,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-export async function registerUser(name, email, phone, city, password, code) {
+export async function registerUser(name, email, phone, city, password, isAdmin, isAge18, state ) {
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
@@ -28,14 +28,15 @@ export async function registerUser(name, email, phone, city, password, code) {
       email: email,
       phone: phone,
       city: city,
-      code: code,
+      isAdmin: isAdmin,
+      isAge18: isAge18,
+      state: state,
       createdAt: new Date(),
     });
 
     return { success: true };
   } catch (error) {
     console.error("Ops! Email ja cadastrados:", error.message);
-    
     return { success: false, message: error.message };
   }
 }

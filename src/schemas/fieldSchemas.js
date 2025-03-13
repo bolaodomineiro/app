@@ -42,8 +42,9 @@ export const registerSchema = z.object({
     phone: phoneSchema,
     city: cidadeSchema,
     password: passwordSchema,
-    code: codeSchema,
-    checkbox: checkboxSchema,
+    isAdmin: z.boolean().optional(),
+    isAge18: checkboxSchema,
+    state: z.string().min(2, "O estado é obrigatório."),
 });
 
 // schema de recuperação de senha

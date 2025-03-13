@@ -34,7 +34,7 @@ export const ContainerRegister = styled.section`
         cursor: pointer;
       }
 
-      input {
+      input, .select {
         display: flex;  
         align-items: center;
         width: 250px;

@@ -44,24 +44,38 @@ function formatPhoneNumber(value) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     const form = event.target;
+
     const name = form.name.value;
     const email = form.email.value;
     const phone = form.phone.value;
     const city = form.city.value;
     const password = form.password.value;
-    const code = form.code.value;
-    const checkbox = form.checkbox.checked;
+    const isAdmin = false;
+    const state = form.state.value;
+    const isAge18 = form.checkbox.checked;
 
-    const validation = registerSchema.safeParse({ name, email, phone, city, password, code, checkbox });
+    
+console.log("Dados do formulário antes da validação:", 
+  name,
+  email,
+  phone,
+  city,
+  password,
+  isAdmin,
+  state,
+  isAge18,
+);
+
+    const validation = registerSchema.safeParse({ name, email, phone, city, password, isAdmin, isAge18, state});
 
     if (!validation.success) {
-      alert(validation.success);
+      console.log(validation.error.issues[0].message);
+      alert(validation.error.issues[0].message);
       return;
     }
 
-    const result = await registerUser(name, email, phone, city, password, code);
+    const result = await registerUser(name, email, phone, city, password, isAdmin, isAge18, state);
 
     if (result.success) {
       alert("Usuário cadastrado com sucesso!");
@@ -106,6 +120,32 @@ function formatPhoneNumber(value) {
         </div>
 
         <div>
+          <label>Seu Estado <span className="asterisk">*</span></label>
+          <select name="state"  className="select">
+            <option id="option" value="">Selecione um Estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraiba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+          </select>
+        </div>
+
+        <div>
           <label>Senha <span className="asterisk">*</span></label>
           <div className="password-container">
             <input 
@@ -131,10 +171,10 @@ function formatPhoneNumber(value) {
           </div>
         </div>
 
-        <div>
+        {/* <div>
           <label>Código de Indicação</label>
           <input id="code" name="code" type="text" placeholder="Campo opcional" />
-        </div>
+        </div> */}
 
         <div className="terms-container">
           <input id="checkbox" type="checkbox" className="checkbox" required />
