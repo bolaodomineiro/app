@@ -38,7 +38,7 @@ const Header = () => {
         const encryptedUID = encryptUID(getUseId);// criptografa o UID
         console.log(encryptedUID);
         // window.location.href = `https://painel.bolaodomineiro.com.br/dashboard/jogo`; // redireciona para o painel
-        window.location.href = `http://localhost:4000/dashboard/jogo`; // redireciona para o painel
+        window.location.href = `https://painel.bolaodomineiro.com.br/dashboard/jogo`; // redireciona para o painel
     };
     
     const headerRef = useRef(null);
